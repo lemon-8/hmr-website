@@ -41,19 +41,25 @@ export default function PhoneMockups() {
       <Center mt={{ base: "10", lg: "0" }} mb={{ base: "10", lg: "20" }}>
         <Image
           src="/RightPhone.png"
+          alt="RightPhone"
           marginLeft={{ base: "44", lg: "80" }}
           position="absolute"
           maxW={{ base: "50%", lg: "100%" }}
         />
         <Image
           src="/LeftPhone.png"
+          alt="LeftPhone"
           position="absolute"
           marginTop={{ base: "64", lg: "0" }}
           marginBottom={{ base: "64", lg: "0" }}
           marginRight={{ base: "20", lg: "80" }}
           maxW={{ base: "75%", lg: "100%" }}
         />
-        <Image src="/Blob.png" mt={{ base: "0", lg: "20" }} />
+        <Image
+          src="/Blob.png"
+          mt={{ base: "0", lg: "20" }}
+          alt="Blob Background"
+        />
       </Center>
 
       {/* Large phone small phone */}
@@ -64,7 +70,7 @@ export default function PhoneMockups() {
           textAlign="left"
         >
           <Box>
-            <Image src="2phones.png" />
+            <Image src="2phones.png" alt="2 Phones" />
           </Box>
           <VStack>
             <Heading
@@ -96,7 +102,7 @@ export default function PhoneMockups() {
         mx={{ base: "10", lg: "60" }}
       >
         <Stack direction={["column", "row"]}>
-          <Image src="PayingRent.png" />
+          <Image src="PayingRent.png" alt="Paying rent" />
 
           <VStack justifyContent="center">
             <Heading
@@ -150,7 +156,7 @@ export default function PhoneMockups() {
               website.
             </Text>
           </VStack>
-          <Image src="SecureSpace.png" />
+          <Image src="SecureSpace.png" alt="Safe and secure space" />
         </Stack>
       </Box>
     </Box>

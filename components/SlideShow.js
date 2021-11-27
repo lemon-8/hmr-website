@@ -13,7 +13,7 @@ export default function SlideShow() {
         textAlign="left"
         color="hmrblack.500"
       >
-        Let's Have a Look
+        Let&apos;s Have a Look
       </Heading>
       <Text
         fontSize={{ base: "md", lg: "4xl" }}
@@ -25,7 +25,11 @@ export default function SlideShow() {
         Bedroom
       </Text>
       <Center mx={{ base: "10", lg: "56" }}>
-        <Image src="Room1.png" borderRadius={{ base: "10", lg: "35px" }} />
+        <Image
+          src="Room1.png"
+          borderRadius={{ base: "10", lg: "35px" }}
+          alt="Image 1 of Roomyarn build"
+        />
       </Center>
     </Box>
   );

@@ -121,8 +121,8 @@ export default function HeroSection() {
           color="hmrgray.500"
           mt="6"
         >
-          Your own place to chill with your boy's gang! The only hostel with an
-          amazing mobile app to meet all your hostel needs
+          Your own place to chill with your boy&apos;s gang! The only hostel
+          with an amazing mobile app to meet all your hostel needs
         </Text>
         <Center
           width="100%"
