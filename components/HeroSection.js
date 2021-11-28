@@ -94,12 +94,13 @@ export default function HeroSection() {
             },
           },
           retina_detect: false,
-          interactivity: {
-            onhover: {
-              enable: true,
-              mode: "repulse",
-            },
-          },
+          interactivity: {},
+          // interactivity: {
+          //   onhover: {
+          //     enable: true,
+          //     mode: "repulse",
+          //   },
+          // },
         }}
       />
       <Box zIndex={1}>
