@@ -23,7 +23,7 @@ export default function HmrForm() {
   return (
     <Box
       padding={{ base: "5", lg: "9" }}
-      h={{ base: "l", lg: "xl" }}
+      // h={{ base: "l", lg: "xl" }}
       mx={{ base: "10", lg: "80" }}
       mt={{ base: "5", lg: "32" }}
       borderWidth="thin"
@@ -78,7 +78,7 @@ export default function HmrForm() {
         borderRadius="lg"
         px="5"
         fontSize={{ base: "l", md: "2", lg: "16" }}
-        mt={{ base: "6", lg: "2" }}
+        marginTop={{ base: "5", lg: "9" }}
         fontWeight="normal"
         width={{ base: "100%", lg: "initial" }}
       >

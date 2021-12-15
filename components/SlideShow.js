@@ -1,8 +1,15 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, HStack, Text, Stack, VStack } from "@chakra-ui/layout";
 import { Center } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function SlideShow() {
+  const swiper = useRef()
+  console.log("hello")
+  console.log(swiper.current?.activeIndex, "active index")
   return (
     <Box>
       <Heading
@@ -24,13 +31,90 @@ export default function SlideShow() {
       >
         Bedroom
       </Text>
-      <Center mx={{ base: "10", lg: "56" }}>
+      <Carousel ref={swiper}/>
+      {/* <Center mx={{ base: "10", lg: "56" }}>
         <Image
           src="Room1.png"
           borderRadius={{ base: "10", lg: "35px" }}
           alt="Image 1 of Roomyarn build"
         />
-      </Center>
+      </Center> */}
+    </Box>
+  );
+}
+function Carousel(ref) {
+  return (
+    <Box>
+      <Swiper
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
+        spaceBetween={50}
+        slidesPerView={1}
+        style={{ zIndex: "0" }}
+        ref = {ref}
+      >
+        <SwiperSlide
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Center mx={{ base: "10", lg: "56" }}>
+            <Image
+              src="Room1.png"
+              borderRadius={{ base: "10", lg: "3xl" }}
+              alt="Image 1 of Roomyarn build"
+            />
+          </Center>
+          {/* <Image
+            src="Room1.png"
+            height="lg"
+            borderRadius={{ base: "10", lg: "2xl" }}
+          /> */}
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Center mx={{ base: "10", lg: "56" }}>
+            <Image
+              src="Room1.png"
+              borderRadius={{ base: "10", lg: "3xl" }}
+              alt="Image 1 of Roomyarn build"
+            />
+          </Center>
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Center mx={{ base: "10", lg: "56" }}>
+            <Image
+              src="Room1.png"
+              borderRadius={{ base: "10", lg: "3xl" }}
+              alt="Image 1 of Roomyarn build"
+            />
+          </Center>
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Center mx={{ base: "10", lg: "56" }}>
+            <Image
+              src="Room1.png"
+              borderRadius={{ base: "10", lg: "3xl" }}
+              alt="Image 1 of Roomyarn build"
+            />
+          </Center>
+        </SwiperSlide>
+      </Swiper>
     </Box>
   );
 }
