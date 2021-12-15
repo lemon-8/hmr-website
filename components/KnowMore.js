@@ -96,7 +96,11 @@ function Ammenities({
   return (
     <HStack>
       {icon}
-      <Text fontWeight="500" fontSize="xl" pl={{ base: "2", lg: "5" }}>
+      <Text
+        fontWeight="500"
+        fontSize={{ base: "l", lg: "xl" }}
+        pl={{ base: "2", lg: "5" }}
+      >
         {text}
       </Text>
     </HStack>

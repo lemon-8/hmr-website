@@ -105,7 +105,7 @@ export default function HeroSection() {
       />
       <Box zIndex={1}>
         <Heading
-          fontSize={{ base: "7vw", md: "5xl", lg: "7xl" }}
+          fontSize={{ base: "7vw", md: "5xl", lg: "6xl" }}
           fontWeight="600"
           color="hmrblue.500"
           textAlign="center"
