@@ -22,6 +22,7 @@ import { Button, ButtonGroup } from "@chakra-ui/react";
 export default function HmrForm() {
   return (
     <Box
+      className="hmrForm"
       padding={{ base: "5", lg: "9" }}
       // h={{ base: "l", lg: "xl" }}
       mx={{ base: "10", lg: "80" }}
@@ -87,3 +88,11 @@ export default function HmrForm() {
     </Box>
   );
 }
+
+const hmrForm = () => {
+  scroller.scrollTo("hmrForm", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};

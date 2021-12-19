@@ -14,7 +14,7 @@ import {
 export default function PhoneMockups() {
   return (
     //   Dual mockup
-    <Box maxWidth="100vw">
+    <Box maxWidth="100vw" className="ourApp">
       <Heading
         fontSize={{ base: "3xl", lg: "6xl" }}
         mx={{ base: "10", lg: "80" }}

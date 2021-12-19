@@ -15,6 +15,12 @@ import {
 import { IconButton } from "@chakra-ui/react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { Image } from "@chakra-ui/react";
+import { GoPrimitiveDot } from "react-icons/go";
+import { scroller } from "react-scroll";
+import { MdFileDownload } from "react-icons/md";
+import { MdPhone } from "react-icons/md";
+import { FaConciergeBell } from "react-icons/fa";
+import { BsPhoneFill } from "react-icons/bs";
 
 export default function NavBar() {
   return (
@@ -58,13 +64,43 @@ export default function NavBar() {
           icon={<HiMenuAlt4 />}
         />
         <MenuList>
-          <MenuItem icon={<HiMenuAlt4 />}>Ammenities</MenuItem>
-          <MenuItem icon={<HiMenuAlt4 />}>Our App</MenuItem>
+          <MenuItem icon={<FaConciergeBell />} onClick={scrollToSection}>
+            Ammenities
+          </MenuItem>
+          <MenuItem icon={<BsPhoneFill />} onClick={ourApp}>
+            Our App
+          </MenuItem>
           <MenuDivider />
-          <MenuItem icon={<HiMenuAlt4 />}>Download App</MenuItem>
-          <MenuItem icon={<HiMenuAlt4 />}>Contact Us</MenuItem>
+          <MenuItem icon={<MdFileDownload />}>Download App</MenuItem>
+          <MenuItem icon={<MdPhone />} onClick={hmrForm}>
+            Contact Us
+          </MenuItem>
         </MenuList>
       </Menu>
     </HStack>
   );
 }
+
+const scrollToSection = () => {
+  scroller.scrollTo("Ammenities_section", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const ourApp = () => {
+  scroller.scrollTo("ourApp", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const hmrForm = () => {
+  scroller.scrollTo("hmrForm", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};

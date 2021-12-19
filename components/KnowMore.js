@@ -19,7 +19,7 @@ import { color } from "@chakra-ui/styled-system";
 
 export default function KnowMore() {
   return (
-    <Box maxWidth="100vw">
+    <Box maxWidth="100vw" className="Ammenities_section">
       <Heading
         fontSize={{ base: "3xl", lg: "6xl" }}
         mx={{ base: "10", lg: "80" }}
