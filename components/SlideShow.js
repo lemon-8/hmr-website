@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, HStack, Text, Stack, VStack } from "@chakra-ui/layout";
 import { Center } from "@chakra-ui/react";
@@ -5,12 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRef } from "react";
 
 export default function SlideShow() {
-  const swiper = useRef();
-  console.log("hello");
-  console.log(swiper.current?.activeIndex, "active index");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const carouselLabels = ["Bedroom", "Living Room", "Kitchen", "Bathroom"];
   return (
     <Box>
       <Heading
@@ -30,9 +29,9 @@ export default function SlideShow() {
         textAlign="left"
         color="hmrcyan.500"
       >
-        Bedroom
+        {carouselLabels[activeIndex]}
       </Text>
-      <Carousel ref={swiper} />
+      <Carousel setActiveIndex={setActiveIndex} />
       {/* <Center mx={{ base: "10", lg: "56" }}>
         <Image
           src="Room1.png"
@@ -43,7 +42,8 @@ export default function SlideShow() {
     </Box>
   );
 }
-function Carousel(ref) {
+
+const Carousel = ({ setActiveIndex }) => {
   return (
     <Box>
       <Swiper
@@ -52,7 +52,9 @@ function Carousel(ref) {
         spaceBetween={50}
         slidesPerView={1}
         style={{ zIndex: "0" }}
-        ref={ref}
+        onActiveIndexChange={(e) => {
+          setActiveIndex(e.activeIndex);
+        }}
       >
         <SwiperSlide
           style={{
@@ -68,10 +70,10 @@ function Carousel(ref) {
             />
           </Center>
           {/* <Image
-            src="Room1.png"
-            height="lg"
-            borderRadius={{ base: "10", lg: "2xl" }}
-          /> */}
+          src="Room1.png"
+          height="lg"
+          borderRadius={{ base: "10", lg: "2xl" }}
+        /> */}
         </SwiperSlide>
         <SwiperSlide
           style={{
@@ -118,4 +120,4 @@ function Carousel(ref) {
       </Swiper>
     </Box>
   );
-}
+};
