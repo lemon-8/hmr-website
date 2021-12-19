@@ -32,7 +32,7 @@ export default function NavBar() {
       // borderBottom="hmrgray"
       // borderBottomWidth="1px"
     >
-      <Image width="20" src="hmrlogo.png" alt="hmr logo"></Image>
+      <Image width="12" src="hmrlogo.png" alt="hmr logo"></Image>
       {/* <Text fontSize={{ base: "xl", md: "2", lg: "28" }} fontWeight="medium">
         HMR.
       </Text> */}
@@ -54,10 +54,11 @@ export default function NavBar() {
           icon={<HiMenuAlt4 />}
         />
         <MenuList>
-          <MenuItem icon={<HiMenuAlt4 />}>Experience</MenuItem>
           <MenuItem icon={<HiMenuAlt4 />}>Ammenities</MenuItem>
-          <MenuItem icon={<HiMenuAlt4 />}>Open Closed Tab</MenuItem>
-          <MenuItem icon={<HiMenuAlt4 />}>Open File...</MenuItem>
+          <MenuItem icon={<HiMenuAlt4 />}>Our App</MenuItem>
+          <MenuDivider />
+          <MenuItem icon={<HiMenuAlt4 />}>Download App</MenuItem>
+          <MenuItem icon={<HiMenuAlt4 />}>Contact Us</MenuItem>
         </MenuList>
       </Menu>
     </HStack>
