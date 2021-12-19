@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 export default function SlideShow() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const carouselLabels = ["Bedroom", "Living Room", "Kitchen", "Bathroom"];
+  const carouselLabels = ["Bedrooms", "Bedrooms", "Common Area", "Bathroom"];
   return (
     <Box>
       <Heading
@@ -83,7 +83,7 @@ const Carousel = ({ setActiveIndex }) => {
         >
           <Center mx={{ base: "10", lg: "56" }}>
             <Image
-              src="Room1.png"
+              src="Room2.png"
               borderRadius={{ base: "10", lg: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />
@@ -97,7 +97,7 @@ const Carousel = ({ setActiveIndex }) => {
         >
           <Center mx={{ base: "10", lg: "56" }}>
             <Image
-              src="Room1.png"
+              src="commonarea.png"
               borderRadius={{ base: "10", lg: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />
@@ -111,7 +111,7 @@ const Carousel = ({ setActiveIndex }) => {
         >
           <Center mx={{ base: "10", lg: "56" }}>
             <Image
-              src="Room1.png"
+              src="Bathroom.png"
               borderRadius={{ base: "10", lg: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />

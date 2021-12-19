@@ -32,7 +32,11 @@ export default function NavBar() {
       // borderBottom="hmrgray"
       // borderBottomWidth="1px"
     >
-      <Image width="12" src="hmrlogo.png" alt="hmr logo"></Image>
+      <Image
+        width={{ base: "8", md: "8", lg: "12" }}
+        src="hmrlogox100.png"
+        alt="hmr logo"
+      ></Image>
       {/* <Text fontSize={{ base: "xl", md: "2", lg: "28" }} fontWeight="medium">
         HMR.
       </Text> */}

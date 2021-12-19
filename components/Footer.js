@@ -15,7 +15,11 @@ import { Button } from "@chakra-ui/button";
 export default function Footer() {
   return (
     <Box>
-      <Center mt="52" bg="hmrblue.500" height="72"></Center>
+      <Center mt="52" bg="hmrblue.500" height="72">
+        <Heading fontWeight="medium" fontSize="medium" color="white">
+          Footer
+        </Heading>
+      </Center>
     </Box>
   );
 }

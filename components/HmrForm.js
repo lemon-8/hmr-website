@@ -63,7 +63,7 @@ export default function HmrForm() {
           <VStack alignItems="start" mt={{ base: "10", lg: "0" }}>
             <HStack>
               <MdCall color="#01CFE7" />
-              <Text>+91 999-999-9999</Text>
+              <Text>+91 96504-15827</Text>
             </HStack>
             <HStack marginTop={{ base: "0", lg: "7" }}>
               <MdMail color="#01CFE7" />
