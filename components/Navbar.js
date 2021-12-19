@@ -1,5 +1,20 @@
 import { HStack, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuIcon,
+  MenuCommand,
+  MenuDivider,
+} from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
+import { HiMenuAlt4 } from "react-icons/hi";
+import { Image } from "@chakra-ui/react";
 
 export default function NavBar() {
   return (
@@ -17,10 +32,11 @@ export default function NavBar() {
       // borderBottom="hmrgray"
       // borderBottomWidth="1px"
     >
-      <Text fontSize={{ base: "xl", md: "2", lg: "28" }} fontWeight="medium">
+      <Image width="20" src="hmrlogo.png" alt="hmr logo"></Image>
+      {/* <Text fontSize={{ base: "xl", md: "2", lg: "28" }} fontWeight="medium">
         HMR.
-      </Text>
-      <Button
+      </Text> */}
+      {/* <Button
         colorScheme="hmrblack"
         borderRadius="full"
         px="5"
@@ -28,7 +44,22 @@ export default function NavBar() {
         fontWeight="normal"
       >
         Book a Visit
-      </Button>
+      </Button> */}
+      <Menu>
+        <MenuButton
+          as={IconButton}
+          variant="solid"
+          // colorScheme="hmrblack"
+          aria-label="Options"
+          icon={<HiMenuAlt4 />}
+        />
+        <MenuList>
+          <MenuItem icon={<HiMenuAlt4 />}>Experience</MenuItem>
+          <MenuItem icon={<HiMenuAlt4 />}>Ammenities</MenuItem>
+          <MenuItem icon={<HiMenuAlt4 />}>Open Closed Tab</MenuItem>
+          <MenuItem icon={<HiMenuAlt4 />}>Open File...</MenuItem>
+        </MenuList>
+      </Menu>
     </HStack>
   );
 }

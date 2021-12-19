@@ -5,11 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useRef } from "react";
 
 export default function SlideShow() {
-  const swiper = useRef()
-  console.log("hello")
-  console.log(swiper.current?.activeIndex, "active index")
+  const swiper = useRef();
+  console.log("hello");
+  console.log(swiper.current?.activeIndex, "active index");
   return (
     <Box>
       <Heading
@@ -31,7 +32,7 @@ export default function SlideShow() {
       >
         Bedroom
       </Text>
-      <Carousel ref={swiper}/>
+      <Carousel ref={swiper} />
       {/* <Center mx={{ base: "10", lg: "56" }}>
         <Image
           src="Room1.png"
@@ -51,7 +52,7 @@ function Carousel(ref) {
         spaceBetween={50}
         slidesPerView={1}
         style={{ zIndex: "0" }}
-        ref = {ref}
+        ref={ref}
       >
         <SwiperSlide
           style={{
