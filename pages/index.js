@@ -10,6 +10,8 @@ import SlideShow from "../components/SlideShow";
 import KnowMore from "../components/KnowMore";
 import PhoneMockups from "../components/PhoneMockups";
 import GetStarted from "../components/GetStarted";
+import Footer from "../components/Footer";
+import HmrForm from "../components/HmrForm";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
         <KnowMore />
         <PhoneMockups />
         <GetStarted />
+        <HmrForm />
+        <Footer />
       </Box>
     </>
   );

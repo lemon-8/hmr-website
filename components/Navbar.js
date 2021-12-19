@@ -4,6 +4,7 @@ import { Button } from "@chakra-ui/react";
 export default function NavBar() {
   return (
     <HStack
+      zIndex="1"
       bg={{ base: "white", md: "transparent", lg: "transparent" }}
       pt={{ base: "6", md: "2", lg: "12" }}
       px={{ base: "6", md: "2", lg: "28" }}

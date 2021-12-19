@@ -137,7 +137,7 @@ export default function PhoneMockups() {
             <Heading
               textAlign="start"
               fontWeight="500"
-              fontSize={{ base: "xl", lg: "6xl" }}
+              fontSize={{ base: "3xl", lg: "6xl" }}
               color="hmrcyan.500"
             >
               Your own safe{" "}
