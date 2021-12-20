@@ -3,6 +3,7 @@ import {
   FormLabel,
   FormErrorMessage,
   FormHelperText,
+  Textarea,
 } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import {
@@ -51,7 +52,7 @@ export default function HmrForm() {
             <FormLabel marginTop={{ base: "5", lg: "9" }}>
               What can we help you with?
             </FormLabel>
-            <Input placeholder="Description" />
+            <Textarea placeholder="Description" />
           </FormControl>
         </Box>
         <Box

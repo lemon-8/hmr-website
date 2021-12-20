@@ -13,6 +13,7 @@ import {
 import { Button } from "@chakra-ui/button";
 import { Iframe } from "react-iframe";
 import { AspectRatio } from "@chakra-ui/react";
+import { scroller } from "react-scroll";
 
 export default function GetStarted() {
   return (
@@ -68,6 +69,7 @@ export default function GetStarted() {
                 Download App
               </Button>
               <Button
+                onClick={hmrForm}
                 colorScheme="hmrblack"
                 borderRadius="full"
                 width={{ base: "100%", lg: "30%" }}
@@ -104,3 +106,11 @@ function initMap() {
     zoom: 8,
   });
 }
+
+const hmrForm = () => {
+  scroller.scrollTo("hmrForm", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
