@@ -10,8 +10,8 @@ import {
   Center,
   Flex,
 } from "@chakra-ui/layout";
-import { GrAnnounce } from "react-icons/gr";
-import { FaDotCircle } from "react-icons/fa";
+
+import { GoPrimitiveDot } from "react-icons/go";
 
 export default function PhoneMockups() {
   return (
@@ -165,7 +165,7 @@ export default function PhoneMockups() {
   );
 }
 
-function Features({ icon = <FaDotCircle />, text = "Managing rent" }) {
+function Features({ icon = <GoPrimitiveDot />, text = "Managing rent" }) {
   return (
     <HStack
       marginTop={{ base: "10", lg: "8" }}
