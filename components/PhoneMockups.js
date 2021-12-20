@@ -11,10 +11,12 @@ import {
   Flex,
 } from "@chakra-ui/layout";
 
+import { GoPrimitiveDot } from "react-icons/go";
+
 export default function PhoneMockups() {
   return (
     //   Dual mockup
-    <Box maxWidth="100vw">
+    <Box maxWidth="100vw" className="ourApp">
       <Heading
         fontSize={{ base: "3xl", lg: "6xl" }}
         mx={{ base: "10", lg: "80" }}
@@ -163,12 +165,12 @@ export default function PhoneMockups() {
   );
 }
 
-function Features({ icon = <MdOutlineCreditCard />, text = "Managing rent" }) {
+function Features({ icon = <GoPrimitiveDot />, text = "Managing rent" }) {
   return (
     <HStack
-      marginTop={{ base: "4", lg: "8" }}
-      lineHeight="taller"
-      fontSize={{ base: "xl", lg: "27" }}
+      marginTop={{ base: "10", lg: "8" }}
+      lineHeight="none"
+      fontSize={{ base: "lg", lg: "27" }}
       fontFamily="poppins"
       fontWeight="500"
       color="hmrcyan.500"

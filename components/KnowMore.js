@@ -19,7 +19,7 @@ import { color } from "@chakra-ui/styled-system";
 
 export default function KnowMore() {
   return (
-    <Box maxWidth="100vw">
+    <Box maxWidth="100vw" className="Ammenities_section">
       <Heading
         fontSize={{ base: "3xl", lg: "6xl" }}
         mx={{ base: "10", lg: "80" }}
@@ -54,8 +54,9 @@ export default function KnowMore() {
           </Heading>
           <Stack
             direction={["column", "row"]}
-            ml={{ base: "0", lg: "0" }}
-            fontSize={{ base: "xl", lg: "2xl" }}
+            px={{ base: "2", lg: "0" }}
+            fontSize={{ base: "lg", lg: "2xl" }}
+            textAlign="start"
           >
             <VStack alignItems="left" mx={{ base: "0", lg: "14" }}>
               <Ammenities />

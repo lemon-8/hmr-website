@@ -3,6 +3,7 @@ import {
   FormLabel,
   FormErrorMessage,
   FormHelperText,
+  Textarea,
 } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/react";
 import {
@@ -18,10 +19,12 @@ import { MdCall } from "react-icons/md";
 import { MdMail } from "react-icons/md";
 import { Image } from "@chakra-ui/react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 
 export default function HmrForm() {
   return (
     <Box
+      className="hmrForm"
       padding={{ base: "5", lg: "9" }}
       // h={{ base: "l", lg: "xl" }}
       mx={{ base: "10", lg: "80" }}
@@ -50,7 +53,7 @@ export default function HmrForm() {
             <FormLabel marginTop={{ base: "5", lg: "9" }}>
               What can we help you with?
             </FormLabel>
-            <Input placeholder="Description" />
+            <Textarea placeholder="Description" />
           </FormControl>
         </Box>
         <Box
@@ -63,11 +66,15 @@ export default function HmrForm() {
           <VStack alignItems="start" mt={{ base: "10", lg: "0" }}>
             <HStack>
               <MdCall color="#01CFE7" />
-              <Text>+91 96504-15827</Text>
+              <Text>
+                <Link href="tel:91 96504-15827">+91 96504-15827</Link>
+              </Text>
             </HStack>
             <HStack marginTop={{ base: "0", lg: "7" }}>
               <MdMail color="#01CFE7" />
-              <Text>hi@hmrhostels.com</Text>
+              <Text>
+                <Link href="mailto:hi@hmrhostels.com">hi@hmrhostels.com</Link>
+              </Text>
             </HStack>
           </VStack>
           <Image display={{ base: "none", lg: "initial" }} src="thumbsup.png" />
@@ -87,3 +94,11 @@ export default function HmrForm() {
     </Box>
   );
 }
+
+const hmrForm = () => {
+  scroller.scrollTo("hmrForm", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
