@@ -44,8 +44,12 @@ export default function Footer() {
             fontWeight="thin"
             lineHeight="9"
           >
-            <ListItem>+91 96504-15827</ListItem>
-            <ListItem>hi@hmrhostels.com</ListItem>
+            <ListItem>
+              <Link href="tel:91 96504-15827">+91 96504-15827</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="mailto:hi@hmrhostels.com">hi@hmrhostels.com</Link>
+            </ListItem>
           </UnorderedList>
         </Box>
         <Box pl={{ base: "0", lg: "16" }}>
