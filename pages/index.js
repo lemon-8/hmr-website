@@ -18,7 +18,10 @@ export default function Home() {
     <>
       <Head>
         <title>HMR Hostel</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width, user-scalable=no"
+        />
       </Head>
       <Box minHeight="100vh" maxWidth="100vw">
         <NavBar />
