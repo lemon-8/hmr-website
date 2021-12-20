@@ -60,7 +60,7 @@ export default function GetStarted() {
                 colorScheme="hmrblack"
                 variant="outline"
                 borderRadius="full"
-                width="100%"
+                width={{ base: "100%", lg: "30%" }}
                 px={{ base: "3", lg: "14" }}
                 fontSize={{ base: "14", lg: "16" }}
                 fontWeight="normal"
@@ -70,7 +70,7 @@ export default function GetStarted() {
               <Button
                 colorScheme="hmrblack"
                 borderRadius="full"
-                width="100%"
+                width={{ base: "100%", lg: "30%" }}
                 px={{ base: "5", lg: "14" }}
                 fontSize={{ base: "sm", lg: "16" }}
                 fontWeight="normal"
@@ -85,7 +85,7 @@ export default function GetStarted() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.375295414770757!3d6.5276316452784755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1567723392506!5m2!1sen!2sng"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.3514599621067!2d77.48089941414015!3d28.468960398218037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea08ea433ac9%3A0x29277c182508d9ce!2sHMR%20BOYS%20HOSTEL!5e0!3m2!1sen!2sin!4v1639940908894!5m2!1sen!2sin"
             alt="demo"
             allowFullScreen
           />

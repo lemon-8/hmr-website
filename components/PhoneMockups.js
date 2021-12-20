@@ -10,6 +10,8 @@ import {
   Center,
   Flex,
 } from "@chakra-ui/layout";
+import { GrAnnounce } from "react-icons/gr";
+import { FaDotCircle } from "react-icons/fa";
 
 export default function PhoneMockups() {
   return (
@@ -163,12 +165,12 @@ export default function PhoneMockups() {
   );
 }
 
-function Features({ icon = <MdOutlineCreditCard />, text = "Managing rent" }) {
+function Features({ icon = <FaDotCircle />, text = "Managing rent" }) {
   return (
     <HStack
-      marginTop={{ base: "4", lg: "8" }}
-      lineHeight="taller"
-      fontSize={{ base: "xl", lg: "27" }}
+      marginTop={{ base: "10", lg: "8" }}
+      lineHeight="none"
+      fontSize={{ base: "lg", lg: "27" }}
       fontFamily="poppins"
       fontWeight="500"
       color="hmrcyan.500"
