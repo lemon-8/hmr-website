@@ -18,47 +18,20 @@ import {
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
     <Box
       mt={{ base: "20", lg: "52" }}
       bg="hmrblue.500"
-      height={{ base: "65vh", lg: "96" }}
+      height={{ base: "60vh", lg: "96" }}
       padding={{ base: "10", lg: "28" }}
     >
-      <Stack direction={["column", "row"]} justifyContent="center">
-        <Box>
-          <Heading fontSize="xl" color="white" fontWeight="medium">
-            Rental Plans
-          </Heading>
-          <UnorderedList
-            listStyleType="none"
-            margin="0"
-            color="white"
-            fontWeight="thin"
-            lineHeight="8"
-          >
-            <ListItem>What we are</ListItem>
-            <ListItem>What sets us apart</ListItem>
-            <ListItem>Know More</ListItem>
-          </UnorderedList>
-        </Box>
-        <Box px={{ base: "0", lg: "44" }}>
-          <Heading fontSize="xl" color="white" fontWeight="medium">
-            Location
-          </Heading>
-          <UnorderedList
-            listStyleType="none"
-            margin="0"
-            color="white"
-            fontWeight="thin"
-            lineHeight="8"
-          >
-            <ListItem>Nearest Places</ListItem>
-            <ListItem>Coming Soon</ListItem>
-          </UnorderedList>
-        </Box>
+      <Stack
+        direction={["column", "row"]}
+        justifyContent={{ base: "left", lg: "center" }}
+      >
         <Box>
           <Heading fontSize="xl" color="white" fontWeight="medium">
             Contact Us
@@ -66,17 +39,43 @@ export default function Footer() {
           <UnorderedList
             listStyleType="none"
             margin="0"
+            pt="3"
             color="white"
             fontWeight="thin"
-            lineHeight="8"
+            lineHeight="9"
           >
-            <ListItem>The Team</ListItem>
-            <ListItem>Story</ListItem>
-            <ListItem>Contact us: +91 96504-15827</ListItem>
+            <ListItem>+91 96504-15827</ListItem>
             <ListItem>hi@hmrhostels.com</ListItem>
           </UnorderedList>
         </Box>
+        <Box pl={{ base: "0", lg: "16" }}>
+          <Heading fontSize="xl" color="white" fontWeight="medium">
+            HMR Hostels
+          </Heading>
+          <UnorderedList
+            listStyleType="none"
+            margin="0"
+            pt="3"
+            color="white"
+            fontWeight="thin"
+            lineHeight="9"
+          >
+            <ListItem>
+              Near Metro College, Knowledge Park III, Greater Noida
+            </ListItem>
+          </UnorderedList>
+        </Box>
       </Stack>
+      <Text
+        textAlign="center"
+        color="gray.400"
+        marginTop={{ base: "12", lg: "16" }}
+      >
+        Developed and Designed by{" "}
+        <Text as="span" color="#FCE100">
+          <Link href="https://lemon8.in/">🍋Lemon8.in</Link>
+        </Text>
+      </Text>
     </Box>
   );
 }
