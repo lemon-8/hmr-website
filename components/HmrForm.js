@@ -67,7 +67,7 @@ export default function HmrForm() {
             <HStack>
               <MdCall color="#01CFE7" />
               <Text>
-                <Link href="tel:91 96504-15827">+91 96504-15827</Link>
+                <Link href="tel:91 98103-06346">+91 98103-06346</Link>
               </Text>
             </HStack>
             <HStack marginTop={{ base: "0", lg: "7" }}>

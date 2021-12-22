@@ -47,6 +47,7 @@ const Carousel = ({ setActiveIndex }) => {
   return (
     <Box>
       <Swiper
+        bg="green"
         modules={[Pagination]}
         pagination={{ clickable: true }}
         spaceBetween={50}

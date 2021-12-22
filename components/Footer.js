@@ -45,7 +45,7 @@ export default function Footer() {
             lineHeight="9"
           >
             <ListItem>
-              <Link href="tel:91 96504-15827">+91 96504-15827</Link>
+              <Link href="tel:91 98103-06346">+91 98103-06346</Link>
             </ListItem>
             <ListItem>
               <Link href="mailto:hi@hmrhostels.com">hi@hmrhostels.com</Link>

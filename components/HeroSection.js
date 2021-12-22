@@ -24,10 +24,10 @@ export default function HeroSection() {
   });
   return (
     <Box
-      mx={{ base: "6", md: "2", lg: "72" }}
+      mx={{ base: "6", md: "2", xl: "72" }}
       minH="100vh"
       //   bgColor="black"
-      pt={{ base: "28", md: "40", lg: "40" }}
+      pt={{ base: "28", md: "40", xl: "40" }}
     >
       <Particles
         height="100vh"
@@ -103,22 +103,31 @@ export default function HeroSection() {
           // },
         }}
       />
-      <Box zIndex={1}>
+      <Box
+        zIndex={1}
+        bgColor={{
+          base: "yellow",
+          sm: "red",
+          md: "blueviolet",
+          lg: "black",
+          xl: "green",
+        }}
+      >
         <Heading
-          fontSize={{ base: "7vw", md: "5xl", lg: "6xl" }}
+          fontSize={{ base: "7vw", md: "5xl", xl: "6xl" }}
           fontWeight="600"
           color="hmrblue.500"
           textAlign="center"
-          lineHeight={{ base: "125%", md: "104.5%", lg: "104.5%" }}
+          lineHeight={{ base: "125%", md: "104.5%", xl: "104.5%" }}
         >
           Hassle Free Stays in a <Text color="hmrcyan.500">Managed Hostel</Text>
         </Heading>
         <Text
-          order={{ base: "2", md: "1", lg: "1" }}
-          fontSize={{ base: "md", lg: "xl" }}
+          order={{ base: "2", md: "1", xl: "1" }}
+          fontSize={{ base: "md", xl: "xl" }}
           fontWeight="500"
           textAlign="center"
-          mx={{ base: "0%", md: "0%", lg: "25%" }}
+          mx={{ base: "0%", md: "0%", xl: "25%" }}
           color="hmrgray.500"
           mt="6"
         >
@@ -129,7 +138,7 @@ export default function HeroSection() {
           width="100%"
           //   bgColor="white"
           mt="16"
-          order={{ base: "1", md: "2", lg: "2" }}
+          order={{ base: "1", md: "2", xl: "2" }}
         >
           <Image
             borderRadius="xl"

@@ -1,5 +1,12 @@
 import { Image } from "@chakra-ui/image";
-import { MdOutlineCreditCard } from "react-icons/md";
+
+import {
+  Purchase32,
+  Bullhorn32,
+  Location32,
+  Clean32,
+  IdManagement32,
+} from "@carbon/icons-react";
 import {
   Box,
   Heading,
@@ -12,6 +19,7 @@ import {
 } from "@chakra-ui/layout";
 
 import { GoPrimitiveDot } from "react-icons/go";
+import { Icon } from "@chakra-ui/react";
 
 export default function PhoneMockups() {
   return (
@@ -88,11 +96,11 @@ export default function PhoneMockups() {
               paddingLeft={{ base: "0", lg: "5" }}
               paddingTop={{ base: "0", lg: "5" }}
             >
-              <Features />
-              <Features text="Viewing Announcements" />
-              <Features text="Checking Out Nearby Places" />
-              <Features text="Request Cleaning of the Room" />
-              <Features text="Approving Visitors" />
+              <Features icon={Purchase32} />
+              <Features icon={Bullhorn32} text="Viewing Announcements" />
+              <Features icon={Location32} text="Checking Out Nearby Places" />
+              <Features icon={Clean32} text="Request Cleaning of the Room" />
+              <Features icon={IdManagement32} text="Approving Visitors" />
             </Box>
           </VStack>
         </Stack>
@@ -165,17 +173,22 @@ export default function PhoneMockups() {
   );
 }
 
-function Features({ icon = <GoPrimitiveDot />, text = "Managing rent" }) {
+function Features({ icon = GoPrimitiveDot, text = "Managing rent" }) {
   return (
     <HStack
+      width={{ lg: "fit-content" }}
+      bg="#F5F9FE"
+      padding="3"
+      px="5"
+      borderRadius="full"
       marginTop={{ base: "10", lg: "8" }}
       lineHeight="none"
-      fontSize={{ base: "lg", lg: "27" }}
+      fontSize={{ base: "lg", xl: "2xl" }}
       fontFamily="poppins"
       fontWeight="500"
       color="hmrcyan.500"
     >
-      {icon}
+      <Icon as={icon} color="hmrcyan.500" boxSize="1.3em" />
       <Text>{text}</Text>
     </HStack>
   );
