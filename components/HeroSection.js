@@ -1,5 +1,4 @@
 import Particles from 'react-tsparticles';
-// import Particles from 'react-particles-js';
 import { Image } from '@chakra-ui/image';
 import {
 	Center,
@@ -17,6 +16,11 @@ import {
 	VStack,
 	Flex,
 } from '@chakra-ui/layout';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { EffectCards } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+
 export default function HeroSection() {
 	const particleDensityArea = useBreakpointValue({
 		base: 700,
@@ -139,13 +143,50 @@ export default function HeroSection() {
 					mt="16"
 					order={{ base: '1', md: '2', lg: '2' }}
 				>
-					<Image
+					<Carousel />
+					{/* <Image
 						borderRadius="xl"
 						src="./hmr-building.png"
 						alt="A picture of HMR hostel building"
-					/>
+					/> */}
 				</Center>
 			</Box>
 		</Box>
+	);
+}
+
+function Carousel() {
+	// SwiperCore.use([EffectCards]);
+	return (
+		<Swiper
+			modules={[EffectCards]}
+			effect={'cards'}
+			grabCursor={true}
+			style={{ height: '100%', width: '500px' }}
+			loop
+			loopedSlides={3}
+		>
+			<SwiperSlide style={{ borderRadius: '10px' }}>
+				<Image
+					borderRadius="xl"
+					src="./hmr-building.png"
+					alt="A picture of HMR hostel building"
+				/>
+			</SwiperSlide>
+			<SwiperSlide style={{ borderRadius: '10px' }}>
+				<Image
+					borderRadius="xl"
+					src="./hmr-building.png"
+					alt="A picture of HMR hostel building"
+				/>
+			</SwiperSlide>
+			<SwiperSlide style={{ borderRadius: '10px' }}>
+				<Image
+					borderRadius="xl"
+					src="./hmr-building.png"
+					alt="A picture of HMR hostel building"
+				/>
+			</SwiperSlide>
+		</Swiper>
 	);
 }
