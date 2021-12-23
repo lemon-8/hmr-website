@@ -47,9 +47,11 @@ const Carousel = ({ setActiveIndex }) => {
   return (
     <Box>
       <Swiper
-        bg="green"
         modules={[Pagination]}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          bulletActiveClass: "swiper-bullet-active",
+        }}
         spaceBetween={50}
         slidesPerView={1}
         style={{ zIndex: "0" }}

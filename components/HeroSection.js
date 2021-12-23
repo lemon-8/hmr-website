@@ -1,6 +1,6 @@
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
+// import Particles from 'react-particles-js';
 import { Image } from "@chakra-ui/image";
-import { Repulse } from "tsparticles/Options/Classes/Interactivity/Modes/Repulse";
 import {
   Center,
   Square,
@@ -24,14 +24,15 @@ export default function HeroSection() {
   });
   return (
     <Box
-      mx={{ base: "6", md: "2", xl: "72" }}
+      mx={{ base: "6", md: "2", lg: "72" }}
       minH="100vh"
       //   bgColor="black"
-      pt={{ base: "28", md: "40", xl: "40" }}
+      pt={{ base: "28", md: "40", lg: "40" }}
     >
       <Particles
         height="100vh"
         width="98vw"
+        id="particles-js"
         style={{
           zIndex: -1,
           position: "absolute",
@@ -39,6 +40,9 @@ export default function HeroSection() {
           left: 0,
         }}
         params={{
+          fullScreen: {
+            enable: false,
+          },
           particles: {
             number: {
               value: 10,
@@ -54,6 +58,7 @@ export default function HeroSection() {
               speed: 5,
               out_mode: "out",
               direction: "top",
+              enable: true,
             },
             shape: {
               type: "image",
@@ -93,7 +98,8 @@ export default function HeroSection() {
               },
             },
           },
-          retina_detect: false,
+          retina_detect: true,
+
           interactivity: {},
           // interactivity: {
           //   onhover: {
@@ -103,31 +109,22 @@ export default function HeroSection() {
           // },
         }}
       />
-      <Box
-        zIndex={1}
-        bgColor={{
-          base: "yellow",
-          sm: "red",
-          md: "blueviolet",
-          lg: "black",
-          xl: "green",
-        }}
-      >
+      <Box zIndex={1}>
         <Heading
-          fontSize={{ base: "7vw", md: "5xl", xl: "6xl" }}
+          fontSize={{ base: "7vw", md: "5xl", lg: "6xl" }}
           fontWeight="600"
           color="hmrblue.500"
           textAlign="center"
-          lineHeight={{ base: "125%", md: "104.5%", xl: "104.5%" }}
+          lineHeight={{ base: "125%", md: "104.5%", lg: "104.5%" }}
         >
           Hassle Free Stays in a <Text color="hmrcyan.500">Managed Hostel</Text>
         </Heading>
         <Text
-          order={{ base: "2", md: "1", xl: "1" }}
-          fontSize={{ base: "md", xl: "xl" }}
+          order={{ base: "2", md: "1", lg: "1" }}
+          fontSize={{ base: "md", lg: "xl" }}
           fontWeight="500"
           textAlign="center"
-          mx={{ base: "0%", md: "0%", xl: "25%" }}
+          mx={{ base: "0%", md: "0%", lg: "25%" }}
           color="hmrgray.500"
           mt="6"
         >
@@ -138,7 +135,7 @@ export default function HeroSection() {
           width="100%"
           //   bgColor="white"
           mt="16"
-          order={{ base: "1", md: "2", xl: "2" }}
+          order={{ base: "1", md: "2", lg: "2" }}
         >
           <Image
             borderRadius="xl"
