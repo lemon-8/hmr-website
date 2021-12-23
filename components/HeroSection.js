@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import Particles from "react-tsparticles";
-// import Particles from 'react-particles-js';
 import { Image } from "@chakra-ui/image";
-=======
-import Particles from 'react-tsparticles';
-import { Image } from '@chakra-ui/image';
->>>>>>> b15a98ee9134dd00ac4e96440e1e6be05aedda58
 import {
   Center,
   Square,
@@ -14,7 +8,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import {
-<<<<<<< HEAD
   Box,
   Heading,
   HStack,
@@ -23,21 +16,11 @@ import {
   VStack,
   Flex,
 } from "@chakra-ui/layout";
-=======
-	Box,
-	Heading,
-	HStack,
-	Text,
-	Stack,
-	VStack,
-	Flex,
-} from '@chakra-ui/layout';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { EffectCards } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectCards } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-cards";
 
->>>>>>> b15a98ee9134dd00ac4e96440e1e6be05aedda58
 export default function HeroSection() {
   const particleDensityArea = useBreakpointValue({
     base: 700,
@@ -121,89 +104,87 @@ export default function HeroSection() {
           },
           retina_detect: true,
 
-					interactivity: {},
-					// interactivity: {
-					//   onhover: {
-					//     enable: true,
-					//     mode: "repulse",
-					//   },
-					// },
-				}}
-			/>
-			<Box zIndex={1}>
-				<Heading
-					fontSize={{ base: '7vw', md: '5xl', lg: '6xl' }}
-					fontWeight="600"
-					color="hmrblue.500"
-					textAlign="center"
-					lineHeight={{ base: '125%', md: '104.5%', lg: '104.5%' }}
-				>
-					Hassle Free Stays in a{' '}
-					<Text color="hmrcyan.500">Managed Hostel</Text>
-				</Heading>
-				<Text
-					order={{ base: '2', md: '1', lg: '1' }}
-					fontSize={{ base: 'md', lg: 'xl' }}
-					fontWeight="500"
-					textAlign="center"
-					mx={{ base: '0%', md: '0%', lg: '25%' }}
-					color="hmrgray.500"
-					mt="6"
-				>
-					Your own place to chill with your boy&apos;s gang! The only
-					hostel with an amazing mobile app to meet all your hostel
-					needs
-				</Text>
-				<Center
-					width="100%"
-					//   bgColor="white"
-					mt="16"
-					order={{ base: '1', md: '2', lg: '2' }}
-				>
-					<Carousel />
-					{/* <Image
+          interactivity: {},
+          // interactivity: {
+          //   onhover: {
+          //     enable: true,
+          //     mode: "repulse",
+          //   },
+          // },
+        }}
+      />
+      <Box zIndex={1}>
+        <Heading
+          fontSize={{ base: "7vw", md: "5xl", lg: "6xl" }}
+          fontWeight="600"
+          color="hmrblue.500"
+          textAlign="center"
+          lineHeight={{ base: "125%", md: "104.5%", lg: "104.5%" }}
+        >
+          Hassle Free Stays in a <Text color="hmrcyan.500">Managed Hostel</Text>
+        </Heading>
+        <Text
+          order={{ base: "2", md: "1", lg: "1" }}
+          fontSize={{ base: "md", lg: "xl" }}
+          fontWeight="500"
+          textAlign="center"
+          mx={{ base: "0%", md: "0%", lg: "25%" }}
+          color="hmrgray.500"
+          mt="6"
+        >
+          Your own place to chill with your boy&apos;s gang! The only hostel
+          with an amazing mobile app to meet all your hostel needs
+        </Text>
+        <Center
+          width="100%"
+          //   bgColor="white"
+          mt="16"
+          order={{ base: "1", md: "2", lg: "2" }}
+        >
+          <Carousel />
+          {/* <Image
 						borderRadius="xl"
 						src="./hmr-building.png"
 						alt="A picture of HMR hostel building"
 					/> */}
-				</Center>
-			</Box>
-		</Box>
-	);
+        </Center>
+      </Box>
+    </Box>
+  );
 }
 
 function Carousel() {
-	// SwiperCore.use([EffectCards]);
-	return (
-		<Swiper
-			modules={[EffectCards]}
-			effect={'cards'}
-			grabCursor={true}
-			style={{ height: '100%', width: '500px' }}
-			loop
-			loopedSlides={3}
-		>
-			<SwiperSlide style={{ borderRadius: '10px' }}>
-				<Image
-					borderRadius="xl"
-					src="./hmr-building.png"
-					alt="A picture of HMR hostel building"
-				/>
-			</SwiperSlide>
-			<SwiperSlide style={{ borderRadius: '10px' }}>
-				<Image
-					borderRadius="xl"
-					src="./hmr-building.png"
-					alt="A picture of HMR hostel building"
-				/>
-			</SwiperSlide>
-			<SwiperSlide style={{ borderRadius: '10px' }}>
-				<Image
-					borderRadius="xl"
-					src="./hmr-building.png"
-					alt="A picture of HMR hostel building"
-				/>
-			</SwiperSlide>
-		</Swiper>
-	);
+  // SwiperCore.use([EffectCards]);
+  return (
+    <Swiper
+      modules={[EffectCards]}
+      effect={"cards"}
+      grabCursor={true}
+      style={{ height: "100%", width: "500px" }}
+      loop
+      loopedSlides={3}
+    >
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          borderRadius="xl"
+          src="./hmr-building.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          borderRadius="xl"
+          src="./hmr-building.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          borderRadius="xl"
+          src="./hmr-building.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+    </Swiper>
+  );
 }
