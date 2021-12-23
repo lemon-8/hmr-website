@@ -94,7 +94,7 @@ export default function HeroSection() {
             opacity: {
               value: 0.5,
               anim: {
-                enable: true,
+                enable: false,
               },
             },
           },
