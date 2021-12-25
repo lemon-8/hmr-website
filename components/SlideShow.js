@@ -13,9 +13,9 @@ export default function SlideShow() {
   return (
     <Box>
       <Heading
-        fontSize={{ base: "xl", lg: "6xl" }}
-        mx={{ base: "10", lg: "80" }}
-        mt={{ base: "10", lg: "40" }}
+        fontSize={{ base: "xl", xl: "6xl" }}
+        mx={{ base: "10", xl: "80" }}
+        mt={{ base: "10", xl: "40" }}
         fontWeight="600"
         textAlign="left"
         color="hmrblack.500"
@@ -23,8 +23,8 @@ export default function SlideShow() {
         Let&apos;s Have a Look
       </Heading>
       <Text
-        fontSize={{ base: "md", lg: "4xl" }}
-        mx={{ base: "10", lg: "80" }}
+        fontSize={{ base: "md", xl: "4xl" }}
+        mx={{ base: "10", xl: "80" }}
         fontWeight="500"
         textAlign="left"
         color="hmrcyan.500"
@@ -32,10 +32,10 @@ export default function SlideShow() {
         {carouselLabels[activeIndex]}
       </Text>
       <Carousel setActiveIndex={setActiveIndex} />
-      {/* <Center mx={{ base: "10", lg: "56" }}>
+      {/* <Center mx={{ base: "10", xl: "56" }}>
         <Image
           src="Room1.png"
-          borderRadius={{ base: "10", lg: "35px" }}
+          borderRadius={{ base: "10", xl: "35px" }}
           alt="Image 1 of Roomyarn build"
         />
       </Center> */}
@@ -48,11 +48,11 @@ const Carousel = ({ setActiveIndex }) => {
     <Box>
       <Swiper
         modules={[Pagination]}
+        grabCursor={true}
         pagination={{
           clickable: true,
           bulletActiveClass: "swiper-bullet-active",
         }}
-        spaceBetween={50}
         slidesPerView={1}
         style={{ zIndex: "0" }}
         onActiveIndexChange={(e) => {
@@ -65,17 +65,17 @@ const Carousel = ({ setActiveIndex }) => {
             justifyContent: "center",
           }}
         >
-          <Center mx={{ base: "10", lg: "56" }}>
+          <Center mx={{ base: "10", xl: "56" }}>
             <Image
               src="Room1.png"
-              borderRadius={{ base: "10", lg: "3xl" }}
+              borderRadius={{ base: "10", xl: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />
           </Center>
           {/* <Image
           src="Room1.png"
-          height="lg"
-          borderRadius={{ base: "10", lg: "2xl" }}
+          height="xl"
+          borderRadius={{ base: "10", xl: "2xl" }}
         /> */}
         </SwiperSlide>
         <SwiperSlide
@@ -84,10 +84,10 @@ const Carousel = ({ setActiveIndex }) => {
             justifyContent: "center",
           }}
         >
-          <Center mx={{ base: "10", lg: "56" }}>
+          <Center mx={{ base: "10", xl: "56" }}>
             <Image
               src="Room2.png"
-              borderRadius={{ base: "10", lg: "3xl" }}
+              borderRadius={{ base: "10", xl: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />
           </Center>
@@ -98,10 +98,10 @@ const Carousel = ({ setActiveIndex }) => {
             justifyContent: "center",
           }}
         >
-          <Center mx={{ base: "10", lg: "56" }}>
+          <Center mx={{ base: "10", xl: "56" }}>
             <Image
               src="commonarea.png"
-              borderRadius={{ base: "10", lg: "3xl" }}
+              borderRadius={{ base: "10", xl: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />
           </Center>
@@ -112,10 +112,10 @@ const Carousel = ({ setActiveIndex }) => {
             justifyContent: "center",
           }}
         >
-          <Center mx={{ base: "10", lg: "56" }}>
+          <Center mx={{ base: "10", xl: "56" }}>
             <Image
               src="Bathroom.png"
-              borderRadius={{ base: "10", lg: "3xl" }}
+              borderRadius={{ base: "10", xl: "3xl" }}
               alt="Image 1 of Roomyarn build"
             />
           </Center>

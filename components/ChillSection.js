@@ -11,7 +11,7 @@ import { Image } from "@chakra-ui/image";
 export default function ChillSection() {
   return (
     <Box
-      mx={{ base: "0", md: "0", lg: "64" }}
+      mx={{ base: "0", md: "0", xl: "64" }}
       pt="52"
       // minH="100vh"
       bgColor="white"
@@ -24,12 +24,13 @@ export default function ChillSection() {
       >
         <Box width="100vw">
           <Heading
-            order={{ base: "2", md: "1", lg: "1" }}
-            fontSize={{ base: "3xl", md: "4xl", lg: "6xl" }}
+            order={{ base: "2", md: "1", xl: "1" }}
+            fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
             fontWeight="600"
-            textAlign={{ base: "center", md: "0", lg: "left" }}
-            mt={{ base: "-32", md: "0", lg: "0" }}
-            mx={{ base: "0", md: "0%", lg: "0%" }}
+            px={{ lg: "8", xl: "0" }}
+            textAlign={{ base: "center", md: "0", lg: "left", xl: "left" }}
+            mt={{ base: "-48", md: "0", xl: "0" }}
+            mx={{ base: "0", md: "0%", xl: "0%" }}
             color="hmrblue.500"
           >
             Your own place to chill
@@ -42,22 +43,22 @@ export default function ChillSection() {
             </Text>
           </Heading>
           <Text
-            mx={{ base: "8", lg: "0" }}
-            fontSize={{ base: "md", lg: "xl" }}
+            mx={{ base: "8", xl: "0" }}
+            fontSize={{ base: "md", xl: "xl" }}
             fontWeight="500"
             color="hmrgray.500"
             mt="6"
           >
-            Writing a very long sentance to justify the usage of the heading so
-            that the customer is interested in taking a look at the website.
+            Hangout with your friends and enjoy the hostel experience. We
+            welcome you to the all boys hostel and hope you have a good time!
           </Text>
         </Box>
 
-        <Box width={{ base: "90vw", lg: "8xl" }}>
+        <Box width={{ base: "90vw", lg: "xl", xl: "8xl" }}>
           <Image
             src="./boys.png"
             alt="A illustration of friends"
-            paddingLeft={{ base: "0", lg: "6" }}
+            paddingLeft={{ base: "0", xl: "6" }}
           />
         </Box>
       </Stack>

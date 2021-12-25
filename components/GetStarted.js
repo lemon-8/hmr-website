@@ -20,31 +20,31 @@ export default function GetStarted() {
     <Box
       justifyContent="center"
       alignContent="center"
-      // width={{ base: "80%", lg: "80%" }}
+      // width={{ base: "80%", xl: "80%" }}
       borderWidth="thin"
-      borderRadius={{ base: "6", lg: "14" }}
-      mx={{ base: "10", lg: "60" }}
-      mt={{ base: "5", lg: "32" }}
+      borderRadius={{ base: "6", xl: "14" }}
+      mx={{ base: "10", lg: "44", xl: "60" }}
+      mt={{ base: "5", xl: "32" }}
     >
       <Stack direction={["column", "row"]}>
         <Box
           // borderWidth="thin"
-          // borderRadius={{ base: "6", lg: "14" }}
-          padding={{ base: "6", lg: "14" }}
+          // borderRadius={{ base: "6", xl: "14" }}
+          padding={{ base: "6", xl: "14" }}
           // bg="pink"
-          // h={{ base: "60vh", lg: "70vh" }}
-          // mx={{ base: "10", lg: "60" }}
-          // mt={{ base: "5", lg: "32" }}
+          // h={{ base: "60vh", xl: "70vh" }}
+          // mx={{ base: "10", xl: "60" }}
+          // mt={{ base: "5", xl: "32" }}
         >
           <VStack alignItems="start">
             <HStack>
-              <Heading fontWeight="500" fontSize={{ base: "3xl", lg: "6xl" }}>
+              <Heading fontWeight="500" fontSize={{ base: "3xl", xl: "6xl" }}>
                 So lets get<Text color="hmrcyan.500"> started!</Text>
               </Heading>
             </HStack>
             <Text
               fontWeight="500"
-              fontSize={{ base: "xl", lg: "2xl" }}
+              fontSize={{ base: "xl", xl: "2xl" }}
               color="hmrgray.500"
             >
               This hostel is located nearby all the major hubs and connectivity.
@@ -54,16 +54,16 @@ export default function GetStarted() {
               direction={["column", "row"]}
               // bg="blue.100"
               width="100%"
-              py={{ base: "5", lg: "14" }}
+              py={{ base: "5", xl: "14" }}
               spacing="4"
             >
               <Button
                 colorScheme="hmrblack"
                 variant="outline"
                 borderRadius="full"
-                width={{ base: "100%", lg: "30%" }}
-                px={{ base: "3", lg: "14" }}
-                fontSize={{ base: "14", lg: "16" }}
+                width={{ base: "100%", xl: "30%" }}
+                px={{ base: "3", xl: "14" }}
+                fontSize={{ base: "14", xl: "16" }}
                 fontWeight="normal"
               >
                 Download App
@@ -72,9 +72,9 @@ export default function GetStarted() {
                 onClick={hmrForm}
                 colorScheme="hmrblack"
                 borderRadius="full"
-                width={{ base: "100%", lg: "30%" }}
-                px={{ base: "5", lg: "14" }}
-                fontSize={{ base: "sm", lg: "16" }}
+                width={{ base: "100%", xl: "30%" }}
+                px={{ base: "5", xl: "14" }}
+                fontSize={{ base: "sm", xl: "16" }}
                 fontWeight="normal"
               >
                 Book a Visit
@@ -82,7 +82,7 @@ export default function GetStarted() {
             </Stack>
           </VStack>
         </Box>
-        <Box bg="pink">
+        <Box>
           {/* <AspectRatio ratio={16 / 9}> */}
           <iframe
             width="100%"

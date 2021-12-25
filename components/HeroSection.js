@@ -136,10 +136,9 @@ export default function HeroSection() {
           with an amazing mobile app to meet all your hostel needs
         </Text>
         <Center
-          width="100%"
-          //   bgColor="white"
-          mt="16"
+          mt={{ base: "10", md: "2", lg: "16" }}
           order={{ base: "1", md: "2", lg: "2" }}
+          width="100%"
         >
           <Carousel />
           {/* <Image
@@ -155,16 +154,18 @@ export default function HeroSection() {
 
 function Carousel() {
   // SwiperCore.use([EffectCards]);
+  const carouselwidth = useBreakpointValue({ base: "90%", xl: "500px" });
+  const carouselheight = useBreakpointValue({ base: "100%", xl: "100%" });
   return (
     <Swiper
       modules={[EffectCards]}
       effect={"cards"}
       grabCursor={true}
-      style={{ height: "100%", width: "500px" }}
-      loop
+      style={{ height: carouselheight, width: carouselwidth, zIndex: 0 }}
+      loop={true}
       loopedSlides={3}
     >
-      <SwiperSlide style={{ borderRadius: "10px" }}>
+      <SwiperSlide style={{ borderRadius: "0px" }}>
         <Image
           borderRadius="xl"
           src="./hmr-building.png"
@@ -174,14 +175,28 @@ function Carousel() {
       <SwiperSlide style={{ borderRadius: "10px" }}>
         <Image
           borderRadius="xl"
-          src="./hmr-building.png"
+          src="./hmr-room1.png"
           alt="A picture of HMR hostel building"
         />
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
         <Image
           borderRadius="xl"
-          src="./hmr-building.png"
+          src="./hmr-room2.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          borderRadius="xl"
+          src="./hmr-room3.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          borderRadius="xl"
+          src="./hmr-room4.png"
           alt="A picture of HMR hostel building"
         />
       </SwiperSlide>
