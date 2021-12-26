@@ -49,6 +49,7 @@ const Carousel = ({ setActiveIndex }) => {
       <Swiper
         modules={[Pagination]}
         grabCursor={true}
+        navigation={true}
         pagination={{
           clickable: true,
           bulletActiveClass: "swiper-bullet-active",

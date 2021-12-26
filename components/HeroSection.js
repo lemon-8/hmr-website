@@ -154,8 +154,8 @@ export default function HeroSection() {
 
 function Carousel() {
   // SwiperCore.use([EffectCards]);
-  const carouselwidth = useBreakpointValue({ base: "90%", xl: "500px" });
-  const carouselheight = useBreakpointValue({ base: "100%", xl: "100%" });
+  const carouselwidth = useBreakpointValue({ base: "184.45px", xl: "500px" });
+  const carouselheight = useBreakpointValue({ base: "220px", xl: "100%" });
   return (
     <Swiper
       modules={[EffectCards]}
@@ -167,6 +167,7 @@ function Carousel() {
     >
       <SwiperSlide style={{ borderRadius: "0px" }}>
         <Image
+          height={carouselheight}
           borderRadius="xl"
           src="./hmr-building.png"
           alt="A picture of HMR hostel building"
@@ -174,6 +175,7 @@ function Carousel() {
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
         <Image
+          height={carouselheight}
           borderRadius="xl"
           src="./hmr-room1.png"
           alt="A picture of HMR hostel building"
@@ -181,6 +183,7 @@ function Carousel() {
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
         <Image
+          height={carouselheight}
           borderRadius="xl"
           src="./hmr-room2.png"
           alt="A picture of HMR hostel building"
@@ -188,6 +191,7 @@ function Carousel() {
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
         <Image
+          height={carouselheight}
           borderRadius="xl"
           src="./hmr-room3.png"
           alt="A picture of HMR hostel building"
@@ -195,6 +199,7 @@ function Carousel() {
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
         <Image
+          height={carouselheight}
           borderRadius="xl"
           src="./hmr-room4.png"
           alt="A picture of HMR hostel building"

@@ -24,7 +24,7 @@ import { Icon } from "@chakra-ui/react";
 export default function PhoneMockups() {
   return (
     //   Dual mockup
-    <Box maxWidth="100vw" className="ourApp">
+    <Box maxWidth="100%" className="ourApp">
       <Heading
         fontSize={{ base: "3xl", xl: "6xl" }}
         mx={{ base: "10", lg: "44", xl: "80" }}
@@ -148,7 +148,6 @@ export default function PhoneMockups() {
         <Stack direction={["column", "row"]}>
           <VStack textAlign="left" justifyContent="center">
             <Heading
-              textAlign="start"
               fontWeight="500"
               fontSize={{ base: "3xl", xl: "6xl" }}
               color="hmrcyan.500"
