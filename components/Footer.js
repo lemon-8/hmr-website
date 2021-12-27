@@ -65,7 +65,10 @@ export default function Footer() {
             lineHeight="9"
           >
             <ListItem>
-              Near Metro College, Knowledge Park III, Greater Noida
+              Privacy Policy
+              <ListItem>
+                Near Metro College, Knowledge Park III, Greater Noida
+              </ListItem>
             </ListItem>
           </UnorderedList>
         </Box>
