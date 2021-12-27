@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@carbon/icons-react": "^10.44.0",
     "@chakra-ui/react": "^1.6.10",
     "@emotion/react": "11",
     "@emotion/styled": "11",
@@ -23,6 +24,7 @@
     "react-native-vector-icons": "^9.0.0",
     "react-particles-js": "^3.6.0",
     "react-scroll": "^1.8.4",
+    "react-tsparticles": "^1.37.5",
     "swiper": "^7.3.2",
     "tsparticles": "^1.37.3"
   },

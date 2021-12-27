@@ -21,71 +21,84 @@ export default function KnowMore() {
   return (
     <Box maxWidth="100vw" className="Ammenities_section">
       <Heading
-        fontSize={{ base: "3xl", lg: "6xl" }}
-        mx={{ base: "10", lg: "80" }}
-        mt={{ base: "10", lg: "40" }}
+        fontSize={{ base: "3xl", xl: "6xl" }}
+        mx={{ base: "10", xl: "80" }}
+        mt={{ base: "10", xl: "40" }}
         fontWeight="600"
         textAlign="center"
         color="hmrblack.500"
       >
         Know More About <Text color="hmrcyan.500">the Hostel</Text>
       </Heading>
-      <Center
+      {/* <Center
         // bg="tomato"
+        // borderColor="#ECECEC"
+        // borderWidth="medium"
+        // borderRadius={{ base: "5px", xl: "10px" }}
+        // h={{ base: "60vh", xl: "36vh" }}
+        // color="hmrblue.500"
+        // mt={{ base: "5", xl: "32" }}
+        // mx={{ base: "10", xl: "56" }}
+      > */}
+      <Stack
         borderColor="#ECECEC"
         borderWidth="medium"
-        borderRadius={{ base: "5px", lg: "10px" }}
-        h={{ base: "60vh", lg: "36vh" }}
+        justifyContent="center"
+        mt={{ base: "5", xl: "32" }}
+        mx={{ base: "10", xl: "56" }}
+        borderRadius={{ base: "5px", xl: "10px" }}
+        h={{ base: "60vh", xl: "36vh" }}
         color="hmrblue.500"
-        mt={{ base: "5", lg: "32" }}
-        mx={{ base: "10", lg: "56" }}
+        direction={["column", "row"]}
+        textAlign={{ base: "center", xl: "initial" }}
+        padding={{ base: "10", xl: "4" }}
       >
-        <Stack
-          direction={["column", "row"]}
-          textAlign={{ base: "center", lg: "initial" }}
-        >
-          <Heading
-            fontWeight="500"
-            marginRight={{ base: "0", lg: "10" }}
-            mt={{ base: "0", lg: "10" }}
-            mb={{ base: "10", lg: "0" }}
-          >
-            Ammenities
-          </Heading>
-          <Stack
-            direction={["column", "row"]}
-            px={{ base: "2", lg: "0" }}
-            fontSize={{ base: "lg", lg: "2xl" }}
-            textAlign="start"
-          >
-            <VStack alignItems="left" mx={{ base: "0", lg: "14" }}>
-              <Ammenities />
-              <Ammenities
-                icon={<MdCoffee color="#01CFE7" />}
-                text="Cafeteria/Mess"
-              />
-              <Ammenities
-                icon={<MdHome color="#01CFE7" />}
-                text="Home Styled Cooked Meals"
-              />
-            </VStack>
-            <VStack alignItems="left">
-              <Ammenities
-                icon={<MdPowerSettingsNew color="#01CFE7" />}
-                text="24x7 PowerBackup"
-              />
-              <Ammenities
-                icon={<MdFavoriteBorder color="#01CFE7" />}
-                text="HouseKeeping"
-              />
-              <Ammenities
-                icon={<MdBed color="#01CFE7" />}
-                text="Furnished Bedrooms"
-              />
-            </VStack>
+        <Center>
+          <Stack direction={["column", "row"]}>
+            <Heading
+              fontWeight="500"
+              marginRight={{ base: "0", xl: "10" }}
+              // mt={{ base: "0", xl: "10" }}
+              // mb={{ base: "10", xl: "0" }}
+            >
+              Amenities
+            </Heading>
+            <Stack
+              direction={["column", "row"]}
+              px={{ base: "2", xl: "0" }}
+              fontSize={{ base: "xl", xl: "2xl" }}
+              textAlign="start"
+            >
+              <VStack alignItems="left" mx={{ base: "0", xl: "14" }}>
+                <Ammenities />
+                <Ammenities
+                  icon={<MdCoffee color="#01CFE7" />}
+                  text="Cafeteria/Mess"
+                />
+                <Ammenities
+                  icon={<MdHome color="#01CFE7" />}
+                  text="Home Styled Cooked Meals"
+                />
+              </VStack>
+              <VStack alignItems="left">
+                <Ammenities
+                  icon={<MdPowerSettingsNew color="#01CFE7" />}
+                  text="24x7 PowerBackup"
+                />
+                <Ammenities
+                  icon={<MdFavoriteBorder color="#01CFE7" />}
+                  text="Housekeeping"
+                />
+                <Ammenities
+                  icon={<MdBed color="#01CFE7" />}
+                  text="Furnished Bedrooms"
+                />
+              </VStack>
+            </Stack>
           </Stack>
-        </Stack>
-      </Center>
+        </Center>
+      </Stack>
+      {/* </Center> */}
     </Box>
   );
 }
@@ -99,8 +112,8 @@ function Ammenities({
       {icon}
       <Text
         fontWeight="500"
-        fontSize={{ base: "l", lg: "xl" }}
-        pl={{ base: "2", lg: "5" }}
+        fontSize={{ base: "l", xl: "xl" }}
+        pl={{ base: "2", xl: "5" }}
       >
         {text}
       </Text>

@@ -1,6 +1,5 @@
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
 import { Image } from "@chakra-ui/image";
-import { Repulse } from "tsparticles/Options/Classes/Interactivity/Modes/Repulse";
 import {
   Center,
   Square,
@@ -17,6 +16,11 @@ import {
   VStack,
   Flex,
 } from "@chakra-ui/layout";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectCards } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-cards";
+
 export default function HeroSection() {
   const particleDensityArea = useBreakpointValue({
     base: 700,
@@ -32,6 +36,7 @@ export default function HeroSection() {
       <Particles
         height="100vh"
         width="98vw"
+        id="particles-js"
         style={{
           zIndex: -1,
           position: "absolute",
@@ -39,6 +44,9 @@ export default function HeroSection() {
           left: 0,
         }}
         params={{
+          fullScreen: {
+            enable: false,
+          },
           particles: {
             number: {
               value: 10,
@@ -54,6 +62,7 @@ export default function HeroSection() {
               speed: 5,
               out_mode: "out",
               direction: "top",
+              enable: true,
             },
             shape: {
               type: "image",
@@ -89,11 +98,12 @@ export default function HeroSection() {
             opacity: {
               value: 0.5,
               anim: {
-                enable: true,
+                enable: false,
               },
             },
           },
-          retina_detect: false,
+          retina_detect: true,
+
           interactivity: {},
           // interactivity: {
           //   onhover: {
@@ -126,18 +136,75 @@ export default function HeroSection() {
           with an amazing mobile app to meet all your hostel needs
         </Text>
         <Center
-          width="100%"
-          //   bgColor="white"
-          mt="16"
+          mt={{ base: "10", md: "2", lg: "16" }}
           order={{ base: "1", md: "2", lg: "2" }}
+          width="100%"
         >
-          <Image
-            borderRadius="xl"
-            src="./hmr-building.png"
-            alt="A picture of HMR hostel building"
-          />
+          <Carousel />
+          {/* <Image
+						borderRadius="xl"
+						src="./hmr-building.png"
+						alt="A picture of HMR hostel building"
+					/> */}
         </Center>
       </Box>
     </Box>
+  );
+}
+
+function Carousel() {
+  // SwiperCore.use([EffectCards]);
+  const carouselwidth = useBreakpointValue({ base: "184.45px", xl: "500px" });
+  const carouselheight = useBreakpointValue({ base: "220px", xl: "100%" });
+  return (
+    <Swiper
+      modules={[EffectCards]}
+      effect={"cards"}
+      grabCursor={true}
+      style={{ height: carouselheight, width: carouselwidth, zIndex: 0 }}
+      loop={true}
+      loopedSlides={3}
+    >
+      <SwiperSlide style={{ borderRadius: "0px" }}>
+        <Image
+          height={carouselheight}
+          borderRadius="xl"
+          src="./hmr-building.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          height={carouselheight}
+          borderRadius="xl"
+          src="./hmr-room1.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          height={carouselheight}
+          borderRadius="xl"
+          src="./hmr-room2.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          height={carouselheight}
+          borderRadius="xl"
+          src="./hmr-room3.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Image
+          height={carouselheight}
+          borderRadius="xl"
+          src="./hmr-room4.png"
+          alt="A picture of HMR hostel building"
+        />
+      </SwiperSlide>
+    </Swiper>
   );
 }

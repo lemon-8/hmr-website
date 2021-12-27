@@ -1,5 +1,12 @@
 import { Image } from "@chakra-ui/image";
-import { MdOutlineCreditCard } from "react-icons/md";
+
+import {
+  Purchase32,
+  Bullhorn32,
+  Location32,
+  Clean32,
+  IdManagement32,
+} from "@carbon/icons-react";
 import {
   Box,
   Heading,
@@ -12,15 +19,16 @@ import {
 } from "@chakra-ui/layout";
 
 import { GoPrimitiveDot } from "react-icons/go";
+import { Icon } from "@chakra-ui/react";
 
 export default function PhoneMockups() {
   return (
     //   Dual mockup
-    <Box maxWidth="100vw" className="ourApp">
+    <Box maxWidth="100%" className="ourApp">
       <Heading
-        fontSize={{ base: "3xl", lg: "6xl" }}
-        mx={{ base: "10", lg: "80" }}
-        mt={{ base: "10", lg: "40" }}
+        fontSize={{ base: "3xl", xl: "6xl" }}
+        mx={{ base: "10", lg: "44", xl: "80" }}
+        mt={{ base: "10", xl: "40" }}
         fontWeight="600"
         textAlign="center"
         color="hmrblack.500"
@@ -32,34 +40,34 @@ export default function PhoneMockups() {
       </Heading>
       <Center
         textAlign="center"
-        mx={{ base: "12", lg: "10" }}
-        mt={{ base: "2", lg: "2" }}
+        mx={{ base: "12", xl: "10" }}
+        mt={{ base: "2", xl: "2" }}
         fontWeight="500"
         color="hmrgray.500"
-        fontSize={{ base: "xl", lg: "xl" }}
+        fontSize={{ base: "xl", xl: "xl" }}
       >
         We have our own app which makes the hostel experience better than ever
       </Center>
-      <Center mt={{ base: "10", lg: "0" }} mb={{ base: "10", lg: "20" }}>
+      <Center mt={{ base: "10", xl: "0" }} mb={{ base: "10", xl: "20" }}>
         <Image
           src="/RightPhone.png"
           alt="RightPhone"
-          marginLeft={{ base: "44", lg: "80" }}
+          marginLeft={{ base: "44", lg: "80", xl: "80" }}
           position="absolute"
-          maxW={{ base: "50%", lg: "100%" }}
+          maxW={{ base: "50%", xl: "100%" }}
         />
         <Image
           src="/LeftPhone.png"
           alt="LeftPhone"
           position="absolute"
-          marginTop={{ base: "64", lg: "0" }}
-          marginBottom={{ base: "64", lg: "0" }}
-          marginRight={{ base: "20", lg: "80" }}
-          maxW={{ base: "75%", lg: "100%" }}
+          marginTop={{ base: "64", xl: "0" }}
+          marginBottom={{ base: "64", xl: "0" }}
+          marginRight={{ base: "20", lg: "44", xl: "80" }}
+          maxW={{ base: "75%", xl: "100%" }}
         />
         <Image
           src="/Blob.png"
-          mt={{ base: "0", lg: "20" }}
+          mt={{ base: "0", xl: "20" }}
           alt="Blob Background"
         />
       </Center>
@@ -68,7 +76,7 @@ export default function PhoneMockups() {
       <Box maxWidth="100%">
         <Stack
           direction={["column", "row"]}
-          mx={{ base: "10", lg: "52" }}
+          mx={{ base: "10", lg: "44", xl: "52" }}
           textAlign="left"
         >
           <Box>
@@ -76,23 +84,23 @@ export default function PhoneMockups() {
           </Box>
           <VStack>
             <Heading
-              fontSize={{ base: "3xl", lg: "5xl" }}
-              mx={{ base: "0", lg: "10" }}
-              // pl={{ base: "0", lg: "10" }}
+              fontSize={{ base: "3xl", xl: "5xl" }}
+              mx={{ base: "0", xl: "10" }}
+              // pl={{ base: "0", xl: "10" }}
               fontWeight="500"
               color="hmrblack.500"
             >
               The all in one app for
             </Heading>
             <Box
-              paddingLeft={{ base: "0", lg: "5" }}
-              paddingTop={{ base: "0", lg: "5" }}
+              paddingLeft={{ base: "0", xl: "5" }}
+              paddingTop={{ base: "0", xl: "5" }}
             >
-              <Features />
-              <Features text="Viewing Announcements" />
-              <Features text="Checking Out Nearby Places" />
-              <Features text="Request Cleaning of the Room" />
-              <Features text="Approving Visitors" />
+              <Features icon={Purchase32} />
+              <Features icon={Bullhorn32} text="Viewing Announcements" />
+              <Features icon={Location32} text="Checking Out Nearby Places" />
+              <Features icon={Clean32} text="Request Cleaning of the Room" />
+              <Features icon={IdManagement32} text="Approving Visitors" />
             </Box>
           </VStack>
         </Stack>
@@ -100,18 +108,18 @@ export default function PhoneMockups() {
       {/* Paying Rent */}
       <Box
         // bg="linkedin.100"
-        mt={{ base: "10", lg: "32" }}
-        mx={{ base: "10", lg: "60" }}
+        mt={{ base: "10", xl: "32" }}
+        mx={{ base: "10", lg: "44", xl: "60" }}
       >
         <Stack direction={["column", "row"]}>
           <Image src="PayingRent.png" alt="Paying rent" />
 
           <VStack justifyContent="center">
             <Heading
-              mb={{ base: "0", lg: "10" }}
+              mb={{ base: "0", xl: "10" }}
               textAlign="end"
               fontWeight="500"
-              fontSize={{ base: "3xl", lg: "6xl" }}
+              fontSize={{ base: "3xl", xl: "6xl" }}
               color="hmrcyan.500"
             >
               Paying rent{" "}
@@ -123,7 +131,7 @@ export default function PhoneMockups() {
               fontWeight="400"
               color="hmrgray.500"
               textAlign="right"
-              fontSize={{ base: "xl", lg: "26" }}
+              fontSize={{ base: "xl", xl: "26" }}
             >
               Writing a very long sentance to justify the usage of the heading
               so that the customer is interested in taking a look at the
@@ -133,13 +141,15 @@ export default function PhoneMockups() {
         </Stack>
       </Box>
       {/* Safe and secure space */}
-      <Box mt={{ base: "10", lg: "32" }} mx={{ base: "10", lg: "60" }}>
+      <Box
+        mt={{ base: "10", lg: "28", xl: "32" }}
+        mx={{ base: "10", lg: "44", xl: "60" }}
+      >
         <Stack direction={["column", "row"]}>
           <VStack textAlign="left" justifyContent="center">
             <Heading
-              textAlign="start"
               fontWeight="500"
-              fontSize={{ base: "3xl", lg: "6xl" }}
+              fontSize={{ base: "3xl", xl: "6xl" }}
               color="hmrcyan.500"
             >
               Your own safe{" "}
@@ -151,7 +161,7 @@ export default function PhoneMockups() {
               fontWeight="400"
               color="hmrgray.500"
               textAlign="left"
-              fontSize={{ base: "xl", lg: "26" }}
+              fontSize={{ base: "xl", xl: "26" }}
             >
               Writing a very long sentance to justify the usage of the heading
               so that the customer is interested in taking a look at the
@@ -165,17 +175,22 @@ export default function PhoneMockups() {
   );
 }
 
-function Features({ icon = <GoPrimitiveDot />, text = "Managing rent" }) {
+function Features({ icon = GoPrimitiveDot, text = "Managing rent" }) {
   return (
     <HStack
-      marginTop={{ base: "10", lg: "8" }}
+      width={{ xl: "fit-content" }}
+      bg="#F5F9FE"
+      padding="3"
+      px="5"
+      borderRadius="full"
+      marginTop={{ base: "10", xl: "8" }}
       lineHeight="none"
-      fontSize={{ base: "lg", lg: "27" }}
+      fontSize={{ base: "xl", lg: "xl", xl: "2xl" }}
       fontFamily="poppins"
       fontWeight="500"
       color="hmrcyan.500"
     >
-      {icon}
+      <Icon as={icon} color="hmrcyan.500" boxSize="1.3em" />
       <Text>{text}</Text>
     </HStack>
   );
