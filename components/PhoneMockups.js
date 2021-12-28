@@ -116,7 +116,8 @@ export default function PhoneMockups() {
 
           <VStack justifyContent="center">
             <Heading
-              mb={{ base: "0", xl: "10" }}
+              // mb={{ base: "0", xl: "0" }}
+              marginLeft={{ xl: "80" }}
               textAlign="end"
               fontWeight="500"
               fontSize={{ base: "3xl", xl: "6xl" }}
@@ -132,6 +133,7 @@ export default function PhoneMockups() {
               color="hmrgray.500"
               textAlign="right"
               fontSize={{ base: "xl", xl: "26" }}
+              paddingLeft={{ xl: "60" }}
             >
               Writing a very long sentance to justify the usage of the heading
               so that the customer is interested in taking a look at the
@@ -151,6 +153,7 @@ export default function PhoneMockups() {
               fontWeight="500"
               fontSize={{ base: "3xl", xl: "6xl" }}
               color="hmrcyan.500"
+              marginRight={{ xl: "72" }}
             >
               Your own safe{" "}
               <Text as="span" color="hmrblue.500">
@@ -161,6 +164,7 @@ export default function PhoneMockups() {
               fontWeight="400"
               color="hmrgray.500"
               textAlign="left"
+              paddingRight={{ xl: "72" }}
               fontSize={{ base: "xl", xl: "26" }}
             >
               Writing a very long sentance to justify the usage of the heading
