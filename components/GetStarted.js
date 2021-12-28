@@ -23,7 +23,7 @@ export default function GetStarted() {
       // width={{ base: "80%", xl: "80%" }}
       borderWidth="thin"
       borderRadius={{ base: "6", xl: "14" }}
-      mx={{ base: "10", lg: "44", xl: "60" }}
+      mx={{ base: "10", lg: "44", xl: "80" }}
       mt={{ base: "5", xl: "32" }}
     >
       <Stack direction={["column", "row"]}>
