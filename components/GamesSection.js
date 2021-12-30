@@ -5,6 +5,7 @@ import { Center } from "@chakra-ui/react";
 export default function GamesSection() {
   return (
     <Box
+      className="games_section"
       mx={{ base: "10", xl: "80" }}
       pt={{ base: "20", xl: "36" }}
       maxWidth="100vw"

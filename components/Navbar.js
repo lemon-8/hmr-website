@@ -64,12 +64,16 @@ export default function NavBar() {
           icon={<HiMenuAlt4 />}
         />
         <MenuList>
-          <MenuItem icon={<MdFastfood />} onClick={ourApp}>
+          <MenuItem icon={<MdFastfood />} onClick={games_section}>
             Facilities
+          </MenuItem>
+          <MenuItem icon={<FaConciergeBell />} onClick={slideshow_photos}>
+            Photos
           </MenuItem>
           <MenuItem icon={<FaConciergeBell />} onClick={scrollToSection}>
             Ammenities
           </MenuItem>
+
           <MenuItem icon={<BsPhoneFill />} onClick={ourApp}>
             Our App
           </MenuItem>
@@ -102,6 +106,22 @@ const ourApp = () => {
 
 const hmrForm = () => {
   scroller.scrollTo("hmrForm", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const slideshow_photos = () => {
+  scroller.scrollTo("slideshow_photos", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const games_section = () => {
+  scroller.scrollTo("games_section", {
     duration: 800,
     delay: 0,
     smooth: "easeInOutQuart",
