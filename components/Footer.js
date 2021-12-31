@@ -18,7 +18,8 @@ import {
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/react";
+// import { Link } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
