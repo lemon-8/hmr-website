@@ -15,7 +15,7 @@ import {
 import { IconButton } from "@chakra-ui/react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { Image } from "@chakra-ui/react";
-import { MdFastfood } from "react-icons/md";
+import { MdFastfood, MdPhoto } from "react-icons/md";
 import { scroller } from "react-scroll";
 import { MdFileDownload } from "react-icons/md";
 import { MdPhone } from "react-icons/md";
@@ -67,7 +67,7 @@ export default function NavBar() {
           <MenuItem icon={<MdFastfood />} onClick={games_section}>
             Facilities
           </MenuItem>
-          <MenuItem icon={<FaConciergeBell />} onClick={slideshow_photos}>
+          <MenuItem icon={<MdPhoto />} onClick={slideshow_photos}>
             Photos
           </MenuItem>
           <MenuItem icon={<FaConciergeBell />} onClick={scrollToSection}>

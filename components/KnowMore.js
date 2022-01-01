@@ -4,7 +4,8 @@ import { MdCoffee } from "react-icons/md";
 import { MdHome } from "react-icons/md";
 import { MdPowerSettingsNew } from "react-icons/md";
 import { MdFavoriteBorder } from "react-icons/md";
-import { MdBed } from "react-icons/md";
+import { MdBed, MdTv, MdSportsTennis } from "react-icons/md";
+
 import {
   Box,
   Heading,
@@ -47,7 +48,7 @@ export default function KnowMore() {
         mt={{ base: "5", xl: "32" }}
         mx={{ base: "10", xl: "56" }}
         borderRadius={{ base: "5px", xl: "10px" }}
-        h={{ base: "60vh", xl: "36vh" }}
+        h={{ base: "70vh", xl: "36vh" }}
         color="hmrblue.500"
         direction={["column", "row"]}
         textAlign={{ base: "center", xl: "initial" }}
@@ -58,7 +59,7 @@ export default function KnowMore() {
             <Heading
               fontWeight="500"
               marginRight={{ base: "0", xl: "10" }}
-              // mt={{ base: "0", xl: "10" }}
+              mt={{ base: "0", xl: "8" }}
               // mb={{ base: "10", xl: "0" }}
             >
               Amenities
@@ -79,6 +80,10 @@ export default function KnowMore() {
                   icon={<MdHome color="#01CFE7" />}
                   text="Home Styled Cooked Meals"
                 />
+                <Ammenities
+                  icon={<MdTv color="#01CFE7" />}
+                  text="Living Area with DTH/TV"
+                />
               </VStack>
               <VStack alignItems="left">
                 <Ammenities
@@ -92,6 +97,10 @@ export default function KnowMore() {
                 <Ammenities
                   icon={<MdBed color="#01CFE7" />}
                   text="Furnished Bedrooms"
+                />
+                <Ammenities
+                  icon={<MdSportsTennis color="#01CFE7" />}
+                  text="Indoor Games and Activities"
                 />
               </VStack>
             </Stack>
