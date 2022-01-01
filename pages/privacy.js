@@ -13,7 +13,7 @@ export default function Privacy() {
         mt={{ base: "5" }}
         ml={{ base: "10", lg: "10", xl: "12" }}
       >
-        <Button colorScheme="blue" onClick={() => router.push("/")}>
+        <Button color="#282B2F" onClick={() => router.push("/")}>
           <IoMdArrowRoundBack />
         </Button>
       </Box>

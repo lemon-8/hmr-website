@@ -58,8 +58,8 @@ export default function KnowMore() {
           <Stack direction={["column", "row"]}>
             <Heading
               fontWeight="500"
-              marginRight={{ base: "0", xl: "10" }}
-              mt={{ base: "0", xl: "8" }}
+              marginRight={{ base: "0", xl: "28" }}
+              mt={{ base: "0", xl: "12" }}
               // mb={{ base: "10", xl: "0" }}
             >
               Amenities
