@@ -23,19 +23,11 @@ export default function GetStarted() {
       // width={{ base: "80%", xl: "80%" }}
       borderWidth="thin"
       borderRadius={{ base: "6", xl: "14" }}
-      mx={{ base: "10", lg: "44", xl: "60" }}
+      mx={{ base: "10", lg: "44", xl: "80" }}
       mt={{ base: "5", xl: "32" }}
     >
       <Stack direction={["column", "row"]}>
-        <Box
-          // borderWidth="thin"
-          // borderRadius={{ base: "6", xl: "14" }}
-          padding={{ base: "6", xl: "14" }}
-          // bg="pink"
-          // h={{ base: "60vh", xl: "70vh" }}
-          // mx={{ base: "10", xl: "60" }}
-          // mt={{ base: "5", xl: "32" }}
-        >
+        <Box padding={{ base: "6", xl: "14" }} w={{ base: "100%", xl: "70%" }}>
           <VStack alignItems="start">
             <HStack>
               <Heading fontWeight="500" fontSize={{ base: "3xl", xl: "6xl" }}>
@@ -82,7 +74,7 @@ export default function GetStarted() {
             </Stack>
           </VStack>
         </Box>
-        <Box>
+        <Box bg="green.100" w={{ base: "100%", xl: "30%" }}>
           {/* <AspectRatio ratio={16 / 9}> */}
           <iframe
             width="100%"

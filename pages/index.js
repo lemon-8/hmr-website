@@ -23,6 +23,7 @@ export default function Home() {
           content="initial-scale=1.0, width=device-width, user-scalable=no"
         />
       </Head>
+
       <Box minHeight="100vh" maxWidth="100vw">
         <NavBar />
         <HeroSection />

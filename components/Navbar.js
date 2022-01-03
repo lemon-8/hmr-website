@@ -15,7 +15,7 @@ import {
 import { IconButton } from "@chakra-ui/react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { Image } from "@chakra-ui/react";
-import { GoPrimitiveDot } from "react-icons/go";
+import { MdFastfood, MdPhoto } from "react-icons/md";
 import { scroller } from "react-scroll";
 import { MdFileDownload } from "react-icons/md";
 import { MdPhone } from "react-icons/md";
@@ -64,9 +64,16 @@ export default function NavBar() {
           icon={<HiMenuAlt4 />}
         />
         <MenuList>
+          <MenuItem icon={<MdFastfood />} onClick={games_section}>
+            Facilities
+          </MenuItem>
+          <MenuItem icon={<MdPhoto />} onClick={slideshow_photos}>
+            Photos
+          </MenuItem>
           <MenuItem icon={<FaConciergeBell />} onClick={scrollToSection}>
             Ammenities
           </MenuItem>
+
           <MenuItem icon={<BsPhoneFill />} onClick={ourApp}>
             Our App
           </MenuItem>
@@ -99,6 +106,22 @@ const ourApp = () => {
 
 const hmrForm = () => {
   scroller.scrollTo("hmrForm", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const slideshow_photos = () => {
+  scroller.scrollTo("slideshow_photos", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const games_section = () => {
+  scroller.scrollTo("games_section", {
     duration: 800,
     delay: 0,
     smooth: "easeInOutQuart",

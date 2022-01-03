@@ -11,7 +11,7 @@ export default function SlideShow() {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselLabels = ["Bedrooms", "Bedrooms", "Common Area", "Bathroom"];
   return (
-    <Box>
+    <Box className="slideshow_photos">
       <Heading
         fontSize={{ base: "xl", xl: "6xl" }}
         mx={{ base: "10", xl: "80" }}
