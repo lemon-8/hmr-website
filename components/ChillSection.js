@@ -11,6 +11,7 @@ import { Image } from "@chakra-ui/image";
 export default function ChillSection() {
   return (
     <Box
+      mt={{ base: "16" }}
       mx={{ base: "0", md: "0", xl: "64" }}
       pt="52"
       // minH="100vh"
@@ -25,7 +26,7 @@ export default function ChillSection() {
         <Box width="100vw">
           <Heading
             order={{ base: "2", md: "1", xl: "1" }}
-            fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
+            fontSize={{ base: "3xl", md: "4xl", xl: "6xl" }}
             fontWeight="600"
             px={{ lg: "8", xl: "0" }}
             textAlign={{ base: "center", md: "0", lg: "left", xl: "left" }}
