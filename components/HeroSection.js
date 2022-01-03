@@ -154,8 +154,8 @@ export default function HeroSection() {
 
 function Carousel() {
   // SwiperCore.use([EffectCards]);
-  const carouselwidth = useBreakpointValue({ base: "184.45px", xl: "500px" });
-  const carouselheight = useBreakpointValue({ base: "220px", xl: "100%" });
+  const carouselwidth = useBreakpointValue({ base: "70vw", xl: "28vw" });
+  const carouselheight = useBreakpointValue({ base: "60vh", xl: "70vh" });
   return (
     <Swiper
       modules={[EffectCards]}
@@ -165,45 +165,65 @@ function Carousel() {
       loop={true}
       loopedSlides={3}
     >
-      <SwiperSlide style={{ borderRadius: "0px" }}>
-        <Image
-          height={carouselheight}
-          borderRadius="xl"
-          src="./hmr-building.png"
-          alt="A picture of HMR hostel building"
-        />
+      <SwiperSlide style={{ borderRadius: "10px" }}>
+        <Center width={carouselwidth} height={carouselheight}>
+          <Image
+            position="absolute"
+            height="100%"
+            objectFit="cover"
+            borderRadius="xl"
+            src="./hmr-building.png"
+            alt="A picture of HMR hostel building"
+          />
+        </Center>
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
-        <Image
-          height={carouselheight}
-          borderRadius="xl"
-          src="./hmr-room1.png"
-          alt="A picture of HMR hostel building"
-        />
+        <Center width={carouselwidth} height={carouselheight}>
+          <Image
+            position="absolute"
+            height="100%"
+            objectFit="cover"
+            borderRadius="xl"
+            src="./hmr-room1.png"
+            alt="A picture of HMR hostel building"
+          />
+        </Center>
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
-        <Image
-          height={carouselheight}
-          borderRadius="xl"
-          src="./hmr-room2.png"
-          alt="A picture of HMR hostel building"
-        />
+        <Center width={carouselwidth} height={carouselheight}>
+          <Image
+            position="absolute"
+            height="100%"
+            objectFit="cover"
+            borderRadius="xl"
+            src="./hmr-room2.png"
+            alt="A picture of HMR hostel building"
+          />
+        </Center>
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
-        <Image
-          height={carouselheight}
-          borderRadius="xl"
-          src="./hmr-room3.png"
-          alt="A picture of HMR hostel building"
-        />
+        <Center width={carouselwidth} height={carouselheight}>
+          <Image
+            position="absolute"
+            height="100%"
+            objectFit="cover"
+            borderRadius="xl"
+            src="./hmr-room3.png"
+            alt="A picture of HMR hostel building"
+          />
+        </Center>
       </SwiperSlide>
       <SwiperSlide style={{ borderRadius: "10px" }}>
-        <Image
-          height={carouselheight}
-          borderRadius="xl"
-          src="./hmr-room4.png"
-          alt="A picture of HMR hostel building"
-        />
+        <Center width={carouselwidth} height={carouselheight}>
+          <Image
+            position="absolute"
+            height="100%"
+            objectFit="cover"
+            borderRadius="xl"
+            src="./hmr-room4.png"
+            alt="A picture of HMR hostel building"
+          />
+        </Center>
       </SwiperSlide>
     </Swiper>
   );

@@ -48,7 +48,7 @@ export default function KnowMore() {
         mt={{ base: "5", xl: "32" }}
         mx={{ base: "10", xl: "56" }}
         borderRadius={{ base: "5px", xl: "10px" }}
-        h={{ base: "70vh", xl: "36vh" }}
+        h={{ base: "auto", xl: "36vh" }}
         color="hmrblue.500"
         direction={["column", "row"]}
         textAlign={{ base: "center", xl: "initial" }}
