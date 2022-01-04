@@ -77,7 +77,11 @@ export default function HmrForm() {
               </Text>
             </HStack>
           </VStack>
-          <Image display={{ base: "none", xl: "initial" }} src="thumbsup.png" />
+          <Image
+            display={{ base: "none", xl: "initial" }}
+            src="thumbsup.png"
+            alt="thumbsup"
+          />
         </Box>
       </Stack>
       <Button
