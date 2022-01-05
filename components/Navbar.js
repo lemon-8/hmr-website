@@ -39,6 +39,8 @@ export default function NavBar() {
       // borderBottomWidth="1px"
     >
       <Image
+        cursor="pointer"
+        onClick={hero_section}
         width={{ base: "8", md: "8", lg: "12" }}
         src="hmrlogox100.png"
         alt="hmr logo"
@@ -122,6 +124,14 @@ const slideshow_photos = () => {
 
 const games_section = () => {
   scroller.scrollTo("games_section", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
+const hero_section = () => {
+  scroller.scrollTo("hero_section", {
     duration: 800,
     delay: 0,
     smooth: "easeInOutQuart",
