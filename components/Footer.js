@@ -1,24 +1,7 @@
-import { Image } from "@chakra-ui/image";
-import { MdOutlineCreditCard } from "react-icons/md";
-import {
-  Box,
-  Heading,
-  HStack,
-  Text,
-  Stack,
-  VStack,
-  Center,
-  Flex,
-} from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/button";
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from "@chakra-ui/react";
-// import { Link } from "@chakra-ui/react";
+import { Box, Heading, Text, Stack } from "@chakra-ui/layout";
+
+import { ListItem, UnorderedList } from "@chakra-ui/react";
+
 import Link from "next/link";
 
 export default function Footer() {

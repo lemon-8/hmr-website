@@ -1,5 +1,3 @@
-import { Image } from "@chakra-ui/image";
-import { MdOutlineCreditCard } from "react-icons/md";
 import {
   Box,
   Heading,
@@ -11,8 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
-import { Iframe } from "react-iframe";
-import { AspectRatio } from "@chakra-ui/react";
+
 import { scroller } from "react-scroll";
 
 export default function GetStarted() {
@@ -20,7 +17,6 @@ export default function GetStarted() {
     <Box
       justifyContent="center"
       alignContent="center"
-      // width={{ base: "80%", xl: "80%" }}
       borderWidth="thin"
       borderRadius={{ base: "6", xl: "14" }}
       mx={{ base: "10", lg: "44", xl: "80" }}
@@ -44,7 +40,6 @@ export default function GetStarted() {
 
             <Stack
               direction={["column", "row"]}
-              // bg="blue.100"
               width="100%"
               py={{ base: "5", xl: "14" }}
               spacing="4"
@@ -75,7 +70,6 @@ export default function GetStarted() {
           </VStack>
         </Box>
         <Box bg="green.100" w={{ base: "100%", xl: "30%" }}>
-          {/* <AspectRatio ratio={16 / 9}> */}
           <iframe
             width="100%"
             height="100%"
@@ -83,7 +77,6 @@ export default function GetStarted() {
             alt="demo"
             allowFullScreen
           />
-          {/* </AspectRatio> */}
         </Box>
       </Stack>
     </Box>

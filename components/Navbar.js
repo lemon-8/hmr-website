@@ -1,15 +1,9 @@
-import { HStack, Text } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/layout";
 import {
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
   MenuDivider,
 } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/react";
@@ -33,10 +27,7 @@ export default function NavBar() {
       justifyContent="space-between"
       width="100%"
       minHeight="16"
-      // bgColor="white"
       position="fixed"
-      // borderBottom="hmrgray"
-      // borderBottomWidth="1px"
     >
       <Image
         cursor="pointer"
@@ -45,23 +36,11 @@ export default function NavBar() {
         src="hmrlogox100.png"
         alt="hmr logo"
       ></Image>
-      {/* <Text fontSize={{ base: "xl", md: "2", lg: "28" }} fontWeight="medium">
-        HMR.
-      </Text> */}
-      {/* <Button
-        colorScheme="hmrblack"
-        borderRadius="full"
-        px="5"
-        fontSize={{ base: "l", md: "2", lg: "16" }}
-        fontWeight="normal"
-      >
-        Book a Visit
-      </Button> */}
+
       <Menu>
         <MenuButton
           as={IconButton}
           variant="solid"
-          // colorScheme="hmrblack"
           aria-label="Options"
           icon={<HiMenuAlt4 />}
         />
