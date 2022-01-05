@@ -47,7 +47,7 @@ export default function KnowMore() {
             <Heading
               fontWeight="500"
               marginRight={{ base: "0", xl: "28" }}
-              mt={{ base: "0", xl: "12" }}
+              mt={{ base: "0", lg: "12", xl: "12" }}
             >
               Amenities
             </Heading>

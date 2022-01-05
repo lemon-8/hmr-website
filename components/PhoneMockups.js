@@ -51,7 +51,7 @@ export default function PhoneMockups() {
         <Image
           src="/RightPhone.png"
           alt="RightPhone"
-          left={{ base: "40", lg: "80", xl: "80" }}
+          left={{ base: "40", lg: "500px", xl: "900px" }}
           position="absolute"
           maxW={{ base: "50%", xl: "100%" }}
         />
