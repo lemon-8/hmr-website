@@ -29,7 +29,6 @@ function HmrForm() {
     <Box
       className="hmrForm"
       padding={{ base: "5", xl: "9" }}
-      // h={{ base: "l", xl: "xl" }}
       mx={{ base: "10", lg: "44", xl: "80" }}
       mt={{ base: "5", lg: "20", xl: "32" }}
       borderWidth="thin"
@@ -176,7 +175,6 @@ export default function ContactForm() {
             </FormControl>
           </Box>
           <Box
-            // bg="red.100"
             color="hmrblack.500"
             paddingTop={{ base: "0", xl: "12" }}
             paddingLeft={{ base: "0", lg: "10", xl: "10" }}
@@ -199,6 +197,7 @@ export default function ContactForm() {
             <Image
               display={{ base: "none", xl: "initial" }}
               src="thumbsup.png"
+              alt="thumbsup"
             />
           </Box>
         </Stack>
