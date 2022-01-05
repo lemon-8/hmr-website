@@ -1,4 +1,5 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import Head from 'next/head';
 import '@fontsource/poppins/100.css';
 import '@fontsource/poppins/200.css';
 import '@fontsource/poppins/300.css';
@@ -50,9 +51,18 @@ function MyApp({ Component, pageProps }) {
 		},
 	});
 	return (
-		<ChakraProvider theme={theme}>
-			<Component {...pageProps} />
-		</ChakraProvider>
+		<>
+			<Head>
+				<title>HMR Hostel</title>
+				<meta
+					name="viewport"
+					content="initial-scale=1.0, width=device-width, user-scalable=no"
+				/>
+			</Head>
+			<ChakraProvider theme={theme}>
+				<Component {...pageProps} />
+			</ChakraProvider>
+		</>
 	);
 }
 
