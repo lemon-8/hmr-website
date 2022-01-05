@@ -1,4 +1,3 @@
-import { Image } from "@chakra-ui/image";
 import { MdOutlineWifi } from "react-icons/md";
 import { MdCoffee } from "react-icons/md";
 import { MdHome } from "react-icons/md";
@@ -15,8 +14,6 @@ import {
   VStack,
   Center,
 } from "@chakra-ui/layout";
-import { color } from "@chakra-ui/styled-system";
-// import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 
 export default function KnowMore() {
   return (
@@ -31,16 +28,7 @@ export default function KnowMore() {
       >
         Know More About <Text color="hmrcyan.500">the Hostel</Text>
       </Heading>
-      {/* <Center
-        // bg="tomato"
-        // borderColor="#ECECEC"
-        // borderWidth="medium"
-        // borderRadius={{ base: "5px", xl: "10px" }}
-        // h={{ base: "60vh", xl: "36vh" }}
-        // color="hmrblue.500"
-        // mt={{ base: "5", xl: "32" }}
-        // mx={{ base: "10", xl: "56" }}
-      > */}
+
       <Stack
         borderColor="#ECECEC"
         borderWidth="medium"
@@ -60,7 +48,6 @@ export default function KnowMore() {
               fontWeight="500"
               marginRight={{ base: "0", xl: "28" }}
               mt={{ base: "0", xl: "12" }}
-              // mb={{ base: "10", xl: "0" }}
             >
               Amenities
             </Heading>
@@ -107,7 +94,6 @@ export default function KnowMore() {
           </Stack>
         </Center>
       </Stack>
-      {/* </Center> */}
     </Box>
   );
 }

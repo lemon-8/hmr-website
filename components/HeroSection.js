@@ -1,23 +1,9 @@
 import Particles from "react-tsparticles";
 import { Image } from "@chakra-ui/image";
-import {
-  Center,
-  Square,
-  Circle,
-  Button,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import {
-  Box,
-  Heading,
-  HStack,
-  Text,
-  Stack,
-  VStack,
-  Flex,
-} from "@chakra-ui/layout";
+import { Center, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/layout";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectCards } from "swiper";
+import { EffectCards, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
@@ -31,7 +17,6 @@ export default function HeroSection() {
       className="hero_section"
       mx={{ base: "6", md: "2", lg: "72" }}
       minH="100vh"
-      //   bgColor="black"
       pt={{ base: "28", md: "40", lg: "40" }}
     >
       <Particles
@@ -106,12 +91,6 @@ export default function HeroSection() {
           retina_detect: true,
 
           interactivity: {},
-          // interactivity: {
-          //   onhover: {
-          //     enable: true,
-          //     mode: "repulse",
-          //   },
-          // },
         }}
       />
       <Box zIndex={1}>
@@ -142,11 +121,6 @@ export default function HeroSection() {
           width="100%"
         >
           <Carousel />
-          {/* <Image
-						borderRadius="xl"
-						src="./hmr-building.png"
-						alt="A picture of HMR hostel building"
-					/> */}
         </Center>
       </Box>
     </Box>
@@ -154,15 +128,19 @@ export default function HeroSection() {
 }
 
 function Carousel() {
-  // SwiperCore.use([EffectCards]);
   const carouselwidth = useBreakpointValue({ base: "70vw", xl: "28vw" });
   const carouselheight = useBreakpointValue({ base: "60vh", xl: "70vh" });
   return (
     <Swiper
-      modules={[EffectCards]}
+      modules={[EffectCards, Autoplay]}
       effect={"cards"}
       grabCursor={true}
-      style={{ height: carouselheight, width: carouselwidth, zIndex: 0 }}
+      autoplay={{ delay: 2000 }}
+      style={{
+        height: carouselheight,
+        width: carouselwidth,
+        zIndex: 0,
+      }}
       loop={true}
       loopedSlides={3}
     >

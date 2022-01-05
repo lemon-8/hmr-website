@@ -1,12 +1,4 @@
-import {
-  Box,
-  Heading,
-  HStack,
-  Text,
-  Stack,
-  VStack,
-  Flex,
-} from "@chakra-ui/layout";
+import { Box, Heading, Text, Stack } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 export default function ChillSection() {
   return (
@@ -14,12 +6,10 @@ export default function ChillSection() {
       mt={{ base: "16" }}
       mx={{ base: "0", md: "0", xl: "64" }}
       pt="52"
-      // minH="100vh"
       bgColor="white"
     >
       <Stack
         direction={["column", "row"]}
-        // spacing="24px"
         justifyContent="space-between"
         alignItems="center"
       >

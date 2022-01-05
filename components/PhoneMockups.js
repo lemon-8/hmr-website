@@ -1,5 +1,4 @@
 import { Image } from "@chakra-ui/image";
-
 import {
   Purchase32,
   Bullhorn32,
@@ -52,7 +51,7 @@ export default function PhoneMockups() {
         <Image
           src="/RightPhone.png"
           alt="RightPhone"
-          marginLeft={{ base: "44", lg: "80", xl: "80" }}
+          left={{ base: "40", lg: "80", xl: "80" }}
           position="absolute"
           maxW={{ base: "50%", xl: "100%" }}
         />
@@ -73,7 +72,7 @@ export default function PhoneMockups() {
       </Center>
 
       {/* Large phone small phone */}
-      <Box maxWidth="100%">
+      <Box>
         <Stack
           direction={["column", "row"]}
           mx={{ base: "10", lg: "44", xl: "52" }}

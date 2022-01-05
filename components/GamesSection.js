@@ -1,6 +1,5 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, HStack, Text, Stack, VStack } from "@chakra-ui/layout";
-import { Center } from "@chakra-ui/react";
 
 export default function GamesSection() {
   return (
@@ -97,7 +96,6 @@ function GameItem({
         </Heading>
         <Text
           mr={{ base: "0", xl: "28" }}
-          // bg="gray.100"
           fontSize={{ base: "md", xl: "xl" }}
           fontWeight="300"
           color="hmrgray.500"

@@ -24,7 +24,7 @@ export default function Home() {
         />
       </Head>
 
-      <Box minHeight="100vh" maxWidth="100vw">
+      <Box minHeight="100vh" maxWidth="100vw" overflowX="hidden">
         <NavBar />
         <HeroSection />
         <ChillSection />

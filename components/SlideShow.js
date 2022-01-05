@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { Image } from "@chakra-ui/image";
-import { Box, Heading, HStack, Text, Stack, VStack } from "@chakra-ui/layout";
-import { Center } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/layout";
+import { Center, useBreakpointValue } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
 export default function SlideShow() {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselLabels = ["Bedrooms", "Bedrooms", "Common Area", "Bathroom"];
+  const bulletsize = useBreakpointValue({ base: "20px", xl: "30px" });
   return (
-    <Box className="slideshow_photos">
+    <Box
+      className="slideshow_photos"
+      sx={{ "--swiper-bullet-size": bulletsize }}
+    >
       <Heading
         fontSize={{ base: "xl", xl: "6xl" }}
         mx={{ base: "10", xl: "80" }}
@@ -32,13 +36,6 @@ export default function SlideShow() {
         {carouselLabels[activeIndex]}
       </Text>
       <Carousel setActiveIndex={setActiveIndex} />
-      {/* <Center mx={{ base: "10", xl: "56" }}>
-        <Image
-          src="Room1.png"
-          borderRadius={{ base: "10", xl: "35px" }}
-          alt="Image 1 of Roomyarn build"
-        />
-      </Center> */}
     </Box>
   );
 }
@@ -47,12 +44,15 @@ const Carousel = ({ setActiveIndex }) => {
   return (
     <Box>
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         grabCursor={true}
         navigation={true}
+        autoplay={{
+          delay: 5000,
+        }}
         pagination={{
           clickable: true,
-          bulletActiveClass: "swiper-bullet-active",
+          bulletActiveClass: "hmr-swiper-bullet-active",
         }}
         slidesPerView={1}
         style={{ zIndex: "0" }}
@@ -73,11 +73,6 @@ const Carousel = ({ setActiveIndex }) => {
               alt="Image 1 of Roomyarn build"
             />
           </Center>
-          {/* <Image
-          src="Room1.png"
-          height="xl"
-          borderRadius={{ base: "10", xl: "2xl" }}
-        /> */}
         </SwiperSlide>
         <SwiperSlide
           style={{
