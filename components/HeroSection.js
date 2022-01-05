@@ -28,6 +28,7 @@ export default function HeroSection() {
   });
   return (
     <Box
+      className="hero_section"
       mx={{ base: "6", md: "2", lg: "72" }}
       minH="100vh"
       //   bgColor="black"
