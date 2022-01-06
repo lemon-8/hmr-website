@@ -9,7 +9,7 @@ export default function Footer() {
     <Box
       mt={{ base: "20", lg: "52" }}
       bg="hmrblue.500"
-      height={{ base: "60vh", lg: "96" }}
+      height={{ base: "65vh", lg: "96" }}
       padding={{ base: "10", lg: "28" }}
     >
       <Stack
