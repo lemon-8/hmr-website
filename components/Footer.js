@@ -51,8 +51,9 @@ export default function Footer() {
             <ListItem>
               <Link href="/privacy">Privacy Policy</Link>
               <ListItem>
-                Near Metro College, Knowledge Park III, Greater Noida
+                Plot no 40B, Knowledge Park-III, Opposite Metro College,
               </ListItem>
+              <ListItem>Greater Noida, Uttar Pradesh- 201310</ListItem>
             </ListItem>
           </UnorderedList>
         </Box>
