@@ -46,7 +46,7 @@ export default function KnowMore() {
           <Stack direction={["column", "row"]}>
             <Heading
               fontWeight="500"
-              marginRight={{ base: "0", xl: "28" }}
+              marginRight={{ base: "0", lg: "20", xl: "28" }}
               mt={{ base: "0", lg: "12", xl: "12" }}
             >
               Amenities
@@ -107,7 +107,7 @@ function Ammenities({
       {icon}
       <Text
         fontWeight="500"
-        fontSize={{ base: "l", xl: "xl" }}
+        fontSize={{ base: "l", lg: "md", xl: "xl" }}
         pl={{ base: "2", xl: "5" }}
       >
         {text}
