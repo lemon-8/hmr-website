@@ -13,6 +13,7 @@ export default function SlideShow() {
   const bulletsize = useBreakpointValue({ base: "20px", xl: "30px" });
   return (
     <Box
+      mx={{ lg: "32" }}
       className="slideshow_photos"
       sx={{ "--swiper-bullet-size": bulletsize }}
     >

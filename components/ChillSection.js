@@ -4,7 +4,7 @@ export default function ChillSection() {
   return (
     <Box
       mt={{ base: "16" }}
-      mx={{ base: "0", md: "0", xl: "64" }}
+      mx={{ base: "0", md: "0", lg: "32", xl: "64" }}
       pt="52"
       bgColor="white"
     >
@@ -21,7 +21,7 @@ export default function ChillSection() {
             px={{ lg: "8", xl: "0" }}
             textAlign={{ base: "center", md: "0", lg: "left", xl: "left" }}
             mt={{ base: "-48", md: "0", xl: "0" }}
-            mx={{ base: "0", md: "0%", xl: "0%" }}
+            mx={{ base: "0", md: "0", xl: "0%" }}
             color="hmrblue.500"
           >
             Your own place to chill
