@@ -133,9 +133,9 @@ export default function PhoneMockups() {
               fontSize={{ base: "xl", xl: "26" }}
               paddingLeft={{ xl: "60" }}
             >
-              Writing a very long sentance to justify the usage of the heading
-              so that the customer is interested in taking a look at the
-              website.
+              You can now pay rent via the hostel app which is very convinient
+              and is less time consuming. This way you will never forget the due
+              date of the rent payment.
             </Text>
           </VStack>
         </Stack>
@@ -165,9 +165,9 @@ export default function PhoneMockups() {
               paddingRight={{ xl: "72" }}
               fontSize={{ base: "xl", xl: "26" }}
             >
-              Writing a very long sentance to justify the usage of the heading
-              so that the customer is interested in taking a look at the
-              website.
+              Manage visitors, gate request, and approve visitors through the
+              app itself. This is a safe and secure way to keep track of all the
+              visitors going through the hostel.
             </Text>
           </VStack>
           <Image src="SecureSpace.png" alt="Safe and secure space" />

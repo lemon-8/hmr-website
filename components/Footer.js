@@ -9,7 +9,7 @@ export default function Footer() {
     <Box
       mt={{ base: "20", lg: "52" }}
       bg="hmrblue.500"
-      height={{ base: "60vh", lg: "96" }}
+      height={{ base: "65vh", lg: "96" }}
       padding={{ base: "10", lg: "28" }}
     >
       <Stack
@@ -51,8 +51,9 @@ export default function Footer() {
             <ListItem>
               <Link href="/privacy">Privacy Policy</Link>
               <ListItem>
-                Near Metro College, Knowledge Park III, Greater Noida
+                Plot no 40B, Knowledge Park-III, Opposite Metro College,
               </ListItem>
+              <ListItem>Greater Noida, Uttar Pradesh- 201310</ListItem>
             </ListItem>
           </UnorderedList>
         </Box>
