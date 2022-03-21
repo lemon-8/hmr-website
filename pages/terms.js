@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Box } from "@chakra-ui/react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 import { IoMdArrowRoundBack } from "react-icons/io";
