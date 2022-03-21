@@ -53,12 +53,20 @@ export default function Footer() {
 						lineHeight="9"
 					>
 						<HStack>
-							<Link href="/privacy">Privacy Policy</Link>
-							<Link href="/refunds">
-								Cancellation and Refunds
-							</Link>
-							<Link href="/pricing">Pricing</Link>
-							<Link href="/terms">Terms and Conditions</Link>
+							<u>
+								<Link href="/privacy">Privacy Policy</Link>
+							</u>
+							<u>
+								<Link href="/refunds">
+									Cancellation and Refunds
+								</Link>
+							</u>
+							<u>
+								<Link href="/pricing">Pricing</Link>
+							</u>
+							<u>
+								<Link href="/terms">Terms and Conditions</Link>
+							</u>
 						</HStack>
 						<ListItem>
 							Plot no 40B, Knowledge Park-III, Opposite Metro
