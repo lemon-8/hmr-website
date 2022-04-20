@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { Button, Center, Heading, VStack } from "@chakra-ui/react";
 
 function loadScript(src) {
 	return new Promise((resolve) => {
-		const script = document.createElement('script');
+		const script = document.createElement("script");
 		script.src = src;
 		script.onload = () => {
 			resolve(true);
@@ -20,10 +21,10 @@ export default function Checkout() {
 	const { order_id, redirect_url } = route.query;
 	async function displayRazorpay(order_id, redirect_url) {
 		const res = await loadScript(
-			'https://checkout.razorpay.com/v1/checkout.js'
+			"https://checkout.razorpay.com/v1/checkout.js"
 		);
 		if (!res) {
-			alert('Razorpay SDK failed to load. Are you online?');
+			alert("Razorpay SDK failed to load. Are you online?");
 			return;
 		}
 
@@ -31,18 +32,18 @@ export default function Checkout() {
 			key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
 			order_id: order_id,
 			theme: {
-				color: '#242535',
+				color: "#242535",
 			},
-			name: 'HMR Hostels',
-			send_sms_hash: 'true',
+			name: "HMR Hostels",
+			send_sms_hash: "true",
 			handler: function (response) {
 				const hmr = `${redirect_url}/?orderId=${response.razorpay_order_id}&paymentId=${response.razorpay_payment_id}&signature=${response.razorpay_signature}/`;
-				let a = document.createElement('a');
-				a.target = '_blank';
+				let a = document.createElement("a");
+				a.target = "_blank";
 				a.href = hmr;
-				a.innerText = 'HMR';
-				a.id = 'hmr';
-				let container = document.getElementsByClassName('checkout')[0];
+				a.innerText = "HMR";
+				a.id = "hmr";
+				let container = document.getElementsByClassName("checkout")[0];
 				container.appendChild(a);
 			},
 		};
@@ -55,8 +56,11 @@ export default function Checkout() {
 	}, [order_id, redirect_url]);
 
 	return (
-		<div className="checkout">
-			<h1>Checkout</h1>
-		</div>
+		<Center className="checkout" h="100vh">
+			<VStack spacing="12">
+				<Heading>HMR Hostels</Heading>
+				<Button>Go Back to App</Button>
+			</VStack>
+		</Center>
 	);
 }
