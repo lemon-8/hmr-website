@@ -26,9 +26,9 @@ export default function TnC() {
 				mx={{ base: '10', lg: '44', xl: '80' }}
 				my={{ base: '5', lg: '10', xl: '12' }}
 			>
-				<Button onPress={window.open('./agreement.pdf')}>
-					Download Agreement
-				</Button>
+				<Link passHref href="/agreement.pdf">
+					<Button>Download Agreement</Button>
+				</Link>
 			</Box>
 		</Box>
 	);
