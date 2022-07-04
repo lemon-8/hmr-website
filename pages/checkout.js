@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useRouter } from 'next/router';
+import router, { useRouter } from 'next/router';
 import { Button, Center, Heading, VStack } from '@chakra-ui/react';
 import Link from 'next/link';
 
@@ -17,9 +17,33 @@ function loadScript(src) {
 	});
 }
 
+async function postPaymentData(response, token) {
+	const {
+		razorpay_order_id: orderId,
+		razorpay_payment_id: paymentId,
+		razorpay_signature: signature,
+	} = response;
+
+	const res = await fetch(
+		'https://api.hmrhostels.com/payment/verifyPayment',
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+				token: token,
+			},
+			body: JSON.stringify({
+				orderId,
+				paymentId,
+				signature,
+			}),
+		}
+	);
+}
+
 export default function Checkout() {
 	const route = useRouter();
-	const { order_id, redirect_url } = route.query;
+	const { order_id, redirect_url, token } = route.query;
 	const [redirectURL, setRedicrectURL] = useState(null);
 	const buttonRef = useRef(null);
 
@@ -42,8 +66,10 @@ export default function Checkout() {
 			send_sms_hash: 'true',
 			handler: function (response) {
 				const hmr = `${redirect_url}/?orderId=${response.razorpay_order_id}&paymentId=${response.razorpay_payment_id}&signature=${response.razorpay_signature}/`;
+				postPaymentData(response, token);
 				setRedicrectURL(hmr);
-				buttonRef.current.click();
+				// router.replace(hmr);
+				// buttonRef.current.click();
 			},
 		};
 		const paymentObject = new window.Razorpay(options);
@@ -52,6 +78,10 @@ export default function Checkout() {
 
 	useEffect(() => {
 		if (order_id && redirect_url) displayRazorpay(order_id, redirect_url);
+		router.replace(
+			'exp://exp.host/@lemon8in/hmrhostels?release-channel=default'
+		);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [order_id, redirect_url]);
 
 	return (
