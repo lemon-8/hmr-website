@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { Button, Center, Heading, VStack } from '@chakra-ui/react';
 import Link from 'next/link';
 
@@ -41,10 +41,10 @@ async function postPaymentData(response, token) {
 	);
 }
 
-export default function Checkout() {
+export default function Checkout({ order_id, redirect_url, token }) {
 	const route = useRouter();
-	const { order_id, redirect_url, token } = route.query;
-	const [redirectURL, setRedicrectURL] = useState(null);
+	// const { order_id, redirect_url, token } = route.query;
+	const [redirectURL, setRedirectURL] = useState('/');
 	const buttonRef = useRef(null);
 
 	async function displayRazorpay(order_id, redirect_url) {
@@ -67,7 +67,7 @@ export default function Checkout() {
 			handler: function (response) {
 				const hmr = `${redirect_url}/?orderId=${response.razorpay_order_id}&paymentId=${response.razorpay_payment_id}&signature=${response.razorpay_signature}/`;
 				postPaymentData(response, token);
-				setRedicrectURL(hmr);
+				setRedirectURL(hmr);
 				// router.replace(hmr);
 				// buttonRef.current.click();
 			},
@@ -77,18 +77,17 @@ export default function Checkout() {
 	}
 
 	useEffect(() => {
-		if (order_id && redirect_url) displayRazorpay(order_id, redirect_url);
-		router.replace(
-			'exp://exp.host/@lemon8in/hmrhostels?release-channel=default'
-		);
+		if (order_id) displayRazorpay(order_id, redirect_url);
+		if(!token) alert('Unable to push payment data. Please verify from admin.');
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [order_id, redirect_url]);
+	}, [order_id, redirect_url, token]);
 
 	return (
 		<Center className="checkout" h="100vh">
 			<VStack spacing="12">
 				<Heading>HMR Hostels</Heading>
-				<Link href={redirectURL ?? ''} passHref>
+				<Link href={redirectURL} passHref>
 					<Button disabled={!redirectURL} ref={buttonRef}>
 						Go Back to App
 					</Button>
@@ -96,4 +95,11 @@ export default function Checkout() {
 			</VStack>
 		</Center>
 	);
+}
+
+export async function getServerSideProps(context) {
+	const { order_id = '', redirect_url = '/', token = '' } = context.query;
+	return {
+		props: { order_id, redirect_url, token },
+	};
 }
