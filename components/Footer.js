@@ -56,10 +56,13 @@ export default function Footer() {
 							<u>
 								<Link href="/privacy">Privacy Policy</Link>
 							</u>
-							<u>
+							{/* <u>
 								<Link href="/refunds">
 									Cancellation and Refunds
 								</Link>
+							</u> */}
+							<u>
+								<Link href="/hmr-notice.pdf">Notice</Link>
 							</u>
 							<u>
 								<Link href="/pricing">Pricing</Link>
